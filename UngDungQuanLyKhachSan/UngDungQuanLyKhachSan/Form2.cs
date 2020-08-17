@@ -69,42 +69,45 @@ namespace UngDungQuanLyKhachSan
                 using (SqlConnection connection = new SqlConnection(ConnectionString.connectionString))
                 {
                     connection.Open();
-                    SqlCommand cmd = new SqlCommand(truyVan, connection);
-                    SqlDataReader data = cmd.ExecuteReader(CommandBehavior.CloseConnection);
-                    if (data.Read() == true)
+                    SqlCommand cmd = new SqlCommand();
+                    cmd.CommandText = truyVan;
+                    cmd.Connection = connection;
+                    // kiem tra tai khoan, lay maNv
+                    using (SqlDataReader data = cmd.ExecuteReader())
                     {
-                        maNv = data["EMPLOYEE_ID"].ToString();
+                        if (data.Read() == true)
+                        {
+                            isLogin = true;
+                            maNv = data["EMPLOYEE_ID"].ToString();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Đăng nhập thất bại. \nSai tài khoản hoặc mật khẩu.");
+                        }
                     }
-                    else
+                    // lay ten Nhan Vien, chuyen ve giao dien chinh
+                    string truyVan2 = "SELECT * FROM EMPLOYEE WHERE EMPLOYEE_ID = '"+maNv+"'";
+                    cmd.CommandText = truyVan2;
+                    using (SqlDataReader data2 = cmd.ExecuteReader())
                     {
-                        MessageBox.Show("Đăng nhập thất bại. \nSai tài khoản hoặc mật khẩu.");
+                        if (data2.Read() == true)
+                        {
+                            
+                            fullName = data2["EMPLOYEE_NAME"].ToString();
+                            this.Close();
+                        }
+                        else
+                        {
+                            MessageBox.Show("Lỗi dữ liệu");
+                        }
                     }
-                    
                     connection.Close();
                 }
-                using (SqlConnection connection = new SqlConnection(ConnectionString.connectionString))
-                {
-                    string truyVan2 = "SELECT * FROM EMPLOYEE WHERE EMPLOYEE_ID = '" + maNv + "'";
-                    connection.Open();
-                    SqlCommand cmd = new SqlCommand(truyVan2, connection);
-                    SqlDataReader data = cmd.ExecuteReader();
-                    if (data.Read() == true)
-                    {
-                        isLogin = true;
-                        fullName = data["EMPLOYEE_NAME"].ToString();
-                        this.Close();
-                    }
-                    else
-                    {
-                        MessageBox.Show("Lỗi dữ liệu");
-                    }
 
-                    connection.Close();
-                }
             }
-            catch
+            catch (Exception ex)
             {
-                MessageBox.Show("Lỗi kết nối! ");
+                MessageBox.Show("Lỗi kết nối! " + ex.Message);
             }
         }
 
