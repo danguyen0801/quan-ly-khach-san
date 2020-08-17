@@ -21,7 +21,7 @@ namespace UngDungQuanLyKhachSan
             Application.Run(dangNhap);
             if (dangNhap.isLogin==true)
             {
-                Application.Run(new Form_Main());
+                Application.Run(new Form_Main(dangNhap.fullName));
             }
         }
     }
