@@ -8,6 +8,6 @@ namespace UngDungQuanLyKhachSan
 {
     class ConnectionString
     {
-        public static string connectionString = @"Data Source=DESKTOP-049JUV9\SQLEXPRESS;Initial Catalog = QUANLYKHACHSAN; Integrated Security = True";
+        public static string connectionString = @"Data Source=DESKTOP-049JUV9\SQLEXPRESS;Initial Catalog = QUANLYKHACHSAN; Integrated Security = True;MultipleActiveResultSets=True;";
     }
 }
