@@ -11,9 +11,9 @@ using System.Windows.Forms;
 
 namespace UngDungQuanLyKhachSan
 {
-    public partial class Form1 : Form
+    public partial class Form_Main : Form
     {
-        public Form1()
+        public Form_Main()
         {
             InitializeComponent();
         }
@@ -55,10 +55,13 @@ namespace UngDungQuanLyKhachSan
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            // TODO: This line of code loads data into the 'dataSet1.CUSTOMER' table. You can move, or remove it, as needed.
+            this.cUSTOMERTableAdapter.Fill(this.dataSet1.CUSTOMER);
             // TODO: This line of code loads data into the 'dataSet1.ROOM' table. You can move, or remove it, as needed.
             this.rOOMTableAdapter.Fill(this.dataSet1.ROOM);
             //dataGridView1.AutoSizeColumnsMode = (DataGridViewAutoSizeColumnsMode)DataGridViewAutoSizeColumnMode.Fill;
             //dataGridView1.DataSource = GetAllInfo().Tables[0];
+            textBox1.Text = "vothientin";
         }
         DataSet GetAllInfo()
         {
@@ -93,6 +96,16 @@ namespace UngDungQuanLyKhachSan
             dataGridView1.AutoSizeColumnsMode = (DataGridViewAutoSizeColumnsMode)DataGridViewAutoSizeColumnMode.AllCells;
             //dataGridView1.AutoSizeColumnsMode = (DataGridViewAutoSizeColumnsMode)DataGridViewAutoSizeColumnMode.Fill;
             dataGridView1.DataSource = GetAllInfo().Tables[0];
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuCustomLabel1_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
