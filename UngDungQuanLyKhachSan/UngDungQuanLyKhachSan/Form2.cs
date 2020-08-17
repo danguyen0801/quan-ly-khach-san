@@ -77,6 +77,7 @@ namespace UngDungQuanLyKhachSan
                     {
                         if (data.Read() == true)
                         {
+                            isLogin = true;
                             maNv = data["EMPLOYEE_ID"].ToString();
                         }
                         else
@@ -85,13 +86,13 @@ namespace UngDungQuanLyKhachSan
                         }
                     }
                     // lay ten Nhan Vien, chuyen ve giao dien chinh
-                    string truyVan2 = "SELECT * FROM EMPLOYEE WHERE EMPLOYEE_ID = '" + maNv + "'";
+                    string truyVan2 = "SELECT * FROM EMPLOYEE WHERE EMPLOYEE_ID = '"+maNv+"'";
                     cmd.CommandText = truyVan2;
                     using (SqlDataReader data2 = cmd.ExecuteReader())
                     {
                         if (data2.Read() == true)
                         {
-                            isLogin = true;
+                            
                             fullName = data2["EMPLOYEE_NAME"].ToString();
                             this.Close();
                         }
