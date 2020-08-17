@@ -13,9 +13,10 @@ namespace UngDungQuanLyKhachSan
 {
     public partial class Form_Main : Form
     {
-        public Form_Main()
+        public Form_Main(string fullName)
         {
             InitializeComponent();
+            this.Text = "Xin chào " + fullName;
         }
 
         private void bunifuDropdown1_onItemSelected(object sender, EventArgs e)
