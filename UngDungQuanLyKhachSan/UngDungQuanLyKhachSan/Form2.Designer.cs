@@ -37,10 +37,12 @@
             this.bunifuCustomLabel3 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.button_DangNhap = new Bunifu.Framework.UI.BunifuThinButton2();
             this.button_Thoat = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.SuspendLayout();
             // 
             // bunifuCustomLabel1
             // 
+            this.bunifuCustomLabel1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bunifuCustomLabel1.AutoSize = true;
             this.bunifuCustomLabel1.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel1.Location = new System.Drawing.Point(46, 137);
@@ -56,6 +58,7 @@
             // 
             // bunifuCustomLabel2
             // 
+            this.bunifuCustomLabel2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bunifuCustomLabel2.AutoSize = true;
             this.bunifuCustomLabel2.Font = new System.Drawing.Font("Arial", 11F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel2.Location = new System.Drawing.Point(46, 212);
@@ -67,6 +70,7 @@
             // 
             // txt_MK
             // 
+            this.txt_MK.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txt_MK.BorderColor = System.Drawing.Color.Blue;
             this.txt_MK.ForeColor = System.Drawing.SystemColors.ActiveBorder;
             this.txt_MK.Location = new System.Drawing.Point(167, 212);
@@ -77,6 +81,7 @@
             // 
             // txt_TK
             // 
+            this.txt_TK.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txt_TK.BorderColor = System.Drawing.Color.Aqua;
             this.txt_TK.Location = new System.Drawing.Point(167, 137);
             this.txt_TK.Name = "txt_TK";
@@ -86,6 +91,7 @@
             // 
             // bunifuCustomLabel3
             // 
+            this.bunifuCustomLabel3.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.bunifuCustomLabel3.AutoSize = true;
             this.bunifuCustomLabel3.Font = new System.Drawing.Font("Arial Narrow", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuCustomLabel3.Location = new System.Drawing.Point(277, 40);
@@ -102,6 +108,7 @@
             this.button_DangNhap.ActiveFillColor = System.Drawing.Color.Navy;
             this.button_DangNhap.ActiveForecolor = System.Drawing.Color.White;
             this.button_DangNhap.ActiveLineColor = System.Drawing.Color.Navy;
+            this.button_DangNhap.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.button_DangNhap.BackColor = System.Drawing.SystemColors.Control;
             this.button_DangNhap.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_DangNhap.BackgroundImage")));
             this.button_DangNhap.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
@@ -129,6 +136,7 @@
             this.button_Thoat.ActiveFillColor = System.Drawing.Color.Navy;
             this.button_Thoat.ActiveForecolor = System.Drawing.Color.White;
             this.button_Thoat.ActiveLineColor = System.Drawing.Color.Navy;
+            this.button_Thoat.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.button_Thoat.BackColor = System.Drawing.SystemColors.Control;
             this.button_Thoat.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_Thoat.BackgroundImage")));
             this.button_Thoat.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
@@ -149,6 +157,17 @@
             this.button_Thoat.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.button_Thoat.Click += new System.EventHandler(this.bunifuThinButton22_Click);
             // 
+            // groupBox1
+            // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox1.Location = new System.Drawing.Point(2, 12);
+            this.groupBox1.Name = "groupBox1";
+            this.groupBox1.Size = new System.Drawing.Size(671, 433);
+            this.groupBox1.TabIndex = 5;
+            this.groupBox1.TabStop = false;
+            this.groupBox1.Text = "Đăng nhập ứng dụng";
+            // 
             // DangNhap
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -161,6 +180,7 @@
             this.Controls.Add(this.txt_MK);
             this.Controls.Add(this.bunifuCustomLabel2);
             this.Controls.Add(this.bunifuCustomLabel1);
+            this.Controls.Add(this.groupBox1);
             this.Name = "DangNhap";
             this.Text = "Form2";
             this.Load += new System.EventHandler(this.DangNhap_Load);
@@ -179,5 +199,6 @@
         private Bunifu.Framework.UI.BunifuCustomLabel bunifuCustomLabel3;
         private Bunifu.Framework.UI.BunifuThinButton2 button_DangNhap;
         private Bunifu.Framework.UI.BunifuThinButton2 button_Thoat;
+        private System.Windows.Forms.GroupBox groupBox1;
     }
 }
