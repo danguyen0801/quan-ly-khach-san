@@ -12,11 +12,11 @@ namespace UngDungQuanLyKhachSan
         {
             InitializeComponent();
             this.Text = "Xin chào " + fullName;
-            Rectangle screen = Screen.PrimaryScreen.WorkingArea;
-            int w = Width >= screen.Width ? screen.Width : (screen.Width + Width) / 2;
-            int h = Height >= screen.Height ? screen.Height : (screen.Height + Height) / 2;
-            this.Location = new Point((screen.Width - w) / 2, (screen.Height - h) / 2);
-            this.Size = new Size(w, h);
+            //Rectangle screen = Screen.PrimaryScreen.WorkingArea;
+            //int w = Width >= screen.Width ? screen.Width : (screen.Width + Width) / 2;
+            //int h = Height >= screen.Height ? screen.Height : (screen.Height + Height) / 2;
+            //this.Location = new Point((screen.Width - w) / 2, (screen.Height - h) / 2);
+            //this.Size = new Size(w, h);
 
             //combobox phong con trong
             //comboBox_PhongTrong.Items.Clear();
@@ -40,6 +40,7 @@ namespace UngDungQuanLyKhachSan
             //Load danh sach phong 
             string query_DSPhong = "select * from ROOM";
             dataGridView1.DataSource = truyVanDuLieu(query_DSPhong).Tables[0];
+            //label_TenKhach.Text += " P101";
 
         }
         void fill_ComboBox(ComboBox cbBox, string truyVan, string name_table)
@@ -51,7 +52,6 @@ namespace UngDungQuanLyKhachSan
                 cbBox.Items.Add(dr[name_table].ToString());
             }
         }
-
         DataSet truyVanDuLieu(string truyVan)
         {
             try
@@ -74,12 +74,10 @@ namespace UngDungQuanLyKhachSan
             }
 
         }
-
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
         {
 
         }
-
         private void Button_XemThongtin_Click(object sender, EventArgs e)
         {
             if (comboBox_phongDaThue.Text != "")
@@ -102,8 +100,6 @@ namespace UngDungQuanLyKhachSan
                 MessageBox.Show("Chưa chọn số phòng");
             }
         }
-
-
         private void bunifuCustomLabel1_Click(object sender, EventArgs e)
         {
 
@@ -185,6 +181,16 @@ namespace UngDungQuanLyKhachSan
         private void button_Thoat_Click(object sender, EventArgs e)
         {
             Application.Exit();
+        }
+
+        private void groupBox2_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 
