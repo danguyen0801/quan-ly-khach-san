@@ -12,23 +12,13 @@ namespace UngDungQuanLyKhachSan
         {
             InitializeComponent();
             this.Text = "Xin chào " + fullName;
-            //Rectangle screen = Screen.PrimaryScreen.WorkingArea;
-            //int w = Width >= screen.Width ? screen.Width : (screen.Width + Width) / 2;
-            //int h = Height >= screen.Height ? screen.Height : (screen.Height + Height) / 2;
-            //this.Location = new Point((screen.Width - w) / 2, (screen.Height - h) / 2);
-            //this.Size = new Size(w, h);
-
-            //combobox phong con trong
-            //comboBox_PhongTrong.Items.Clear();
 
         }
-
-
         private void Form1_Load(object sender, EventArgs e)
         {
             this.cUSTOMERTableAdapter.Fill(this.dataSet1.CUSTOMER);
             this.rOOMTableAdapter.Fill(this.dataSet1.ROOM);
-
+            gridView_1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
             //combobox phong con trong
             comboBox_PhongTrong.Items.Clear();
             comboBox_phongDaThue.Items.Clear();
@@ -39,7 +29,7 @@ namespace UngDungQuanLyKhachSan
 
             //Load danh sach phong 
             string query_DSPhong = "select * from ROOM";
-            dataGridView1.DataSource = truyVanDuLieu(query_DSPhong).Tables[0];
+            gridView_1.DataSource = truyVanDuLieu(query_DSPhong).Tables[0];
             //label_TenKhach.Text += " P101";
 
         }
@@ -88,7 +78,7 @@ namespace UngDungQuanLyKhachSan
                 DataSet data = truyVanDuLieu(truyVan);
                 if (data.Tables[0].Rows.Count != 0)
                 {
-                    dataGridView1.DataSource = data.Tables[0];
+                    gridView_1.DataSource = data.Tables[0];
                 }
                 else
                 {
@@ -119,11 +109,11 @@ namespace UngDungQuanLyKhachSan
         {
             string truyVan = "select Distinct RENT_BILL.CUSTOMER_NAME, RENT_BILL.START_DATE, ROOM.*"
                 + "FROM  RENT_BILL , ROOM "
-                + "WHERE RENT_BILL.CUSTOMER_NAME = N'" + txt_tenKhachhang.Text + "' and  ROOM.ROOM_ID = RENT_BILL.ROOM_ID";
+                + "WHERE RENT_BILL.CUSTOMER_NAME LIKE N'%" + txt_tenKhachhang.Text + "%' and  ROOM.ROOM_ID = RENT_BILL.ROOM_ID";
             DataSet data = truyVanDuLieu(truyVan);
             if (data.Tables[0].Rows.Count != 0)
             {
-                dataGridView1.DataSource = data.Tables[0];
+                gridView_1.DataSource = data.Tables[0];
             }
             else
             {
@@ -141,7 +131,7 @@ namespace UngDungQuanLyKhachSan
                 DataSet data = truyVanDuLieu(truyVan);
                 if (data.Tables[0].Rows.Count != 0)
                 {
-                    dataGridView1.DataSource = data.Tables[0];
+                    gridView_1.DataSource = data.Tables[0];
                 }
                 else
                 {
@@ -168,7 +158,7 @@ namespace UngDungQuanLyKhachSan
             DataSet data = truyVanDuLieu(truyVan);
             if (data.Tables[0].Rows.Count != 0)
             {
-                dataGridView1.DataSource = data.Tables[0];
+                gridView_1.DataSource = data.Tables[0];
             }
             else
             {
@@ -189,6 +179,11 @@ namespace UngDungQuanLyKhachSan
         }
 
         private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
