@@ -77,6 +77,7 @@
             this.txt_MK.Name = "txt_MK";
             this.txt_MK.Size = new System.Drawing.Size(450, 22);
             this.txt_MK.TabIndex = 2;
+            this.txt_MK.Text = "123456";
             this.txt_MK.UseSystemPasswordChar = true;
             // 
             // txt_TK
@@ -87,6 +88,7 @@
             this.txt_TK.Name = "txt_TK";
             this.txt_TK.Size = new System.Drawing.Size(450, 22);
             this.txt_TK.TabIndex = 1;
+            this.txt_TK.Text = "thuyuyen";
             this.txt_TK.TextChanged += new System.EventHandler(this.bunifuCustomTextbox2_TextChanged);
             // 
             // bunifuCustomLabel3
@@ -182,7 +184,7 @@
             this.Controls.Add(this.bunifuCustomLabel1);
             this.Controls.Add(this.groupBox1);
             this.Name = "DangNhap";
-            this.Text = "Form2";
+            this.Text = "Đăng nhập ứng dụng";
             this.Load += new System.EventHandler(this.DangNhap_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

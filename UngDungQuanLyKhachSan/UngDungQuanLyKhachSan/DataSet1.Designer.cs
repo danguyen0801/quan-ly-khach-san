@@ -3592,12 +3592,17 @@ SELECT ROOM_ID, ROOM_NAME, ROOM_TYPE, PRICE, STATUS, NOTE, CUSTOMER_NUMBERS FROM
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private void InitCommandCollection() {
-            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[1];
+            this._commandCollection = new global::System.Data.SqlClient.SqlCommand[2];
             this._commandCollection[0] = new global::System.Data.SqlClient.SqlCommand();
             this._commandCollection[0].Connection = this.Connection;
             this._commandCollection[0].CommandText = "SELECT ROOM_ID, ROOM_NAME, ROOM_TYPE, PRICE, STATUS, NOTE, CUSTOMER_NUMBERS FROM " +
                 "dbo.ROOM";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+            this._commandCollection[1] = new global::System.Data.SqlClient.SqlCommand();
+            this._commandCollection[1].Connection = this.Connection;
+            this._commandCollection[1].CommandText = "SELECT ROOM_ID, ROOM_NAME, ROOM_TYPE, PRICE, STATUS, NOTE, CUSTOMER_NUMBERS FROM " +
+                "dbo.ROOM\r\nWHERE ROOM.STATUS = N\'Trống\'";
+            this._commandCollection[1].CommandType = global::System.Data.CommandType.Text;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -3622,6 +3627,19 @@ SELECT ROOM_ID, ROOM_NAME, ROOM_TYPE, PRICE, STATUS, NOTE, CUSTOMER_NUMBERS FROM
             DataSet1.ROOMDataTable dataTable = new DataSet1.ROOMDataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, false)]
+        public virtual int PhongTrong(DataSet1.ROOMDataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[1];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
         }
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
