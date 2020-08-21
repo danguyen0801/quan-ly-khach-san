@@ -223,16 +223,18 @@
             // 
             // gridView_1
             // 
-            this.gridView_1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.gridView_1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.gridView_1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.DisplayedCellsExceptHeaders;
+            this.gridView_1.BackgroundColor = System.Drawing.Color.MintCream;
             this.gridView_1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridView_1.Location = new System.Drawing.Point(8, 20);
+            this.gridView_1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridView_1.Location = new System.Drawing.Point(3, 18);
             this.gridView_1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.gridView_1.Name = "gridView_1";
+            this.gridView_1.RowHeadersVisible = false;
             this.gridView_1.RowHeadersWidth = 51;
             this.gridView_1.RowTemplate.Height = 24;
-            this.gridView_1.Size = new System.Drawing.Size(941, 283);
+            this.gridView_1.Size = new System.Drawing.Size(961, 293);
             this.gridView_1.TabIndex = 12;
             this.gridView_1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -264,8 +266,8 @@
             // 
             this.bunifuThinButton24.ActiveBorderThickness = 1;
             this.bunifuThinButton24.ActiveCornerRadius = 20;
-            this.bunifuThinButton24.ActiveFillColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton24.ActiveForecolor = System.Drawing.Color.White;
+            this.bunifuThinButton24.ActiveFillColor = System.Drawing.Color.Red;
+            this.bunifuThinButton24.ActiveForecolor = System.Drawing.Color.Red;
             this.bunifuThinButton24.ActiveLineColor = System.Drawing.Color.SeaGreen;
             this.bunifuThinButton24.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
@@ -278,8 +280,8 @@
             this.bunifuThinButton24.IdleBorderThickness = 1;
             this.bunifuThinButton24.IdleCornerRadius = 20;
             this.bunifuThinButton24.IdleFillColor = System.Drawing.Color.White;
-            this.bunifuThinButton24.IdleForecolor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton24.IdleLineColor = System.Drawing.Color.SeaGreen;
+            this.bunifuThinButton24.IdleForecolor = System.Drawing.Color.Red;
+            this.bunifuThinButton24.IdleLineColor = System.Drawing.Color.Red;
             this.bunifuThinButton24.Location = new System.Drawing.Point(342, 66);
             this.bunifuThinButton24.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.bunifuThinButton24.Name = "bunifuThinButton24";
@@ -291,9 +293,9 @@
             // 
             this.button_TinhTien.ActiveBorderThickness = 1;
             this.button_TinhTien.ActiveCornerRadius = 20;
-            this.button_TinhTien.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.button_TinhTien.ActiveFillColor = System.Drawing.Color.Red;
             this.button_TinhTien.ActiveForecolor = System.Drawing.Color.White;
-            this.button_TinhTien.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.button_TinhTien.ActiveLineColor = System.Drawing.Color.Red;
             this.button_TinhTien.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.button_TinhTien.BackColor = System.Drawing.SystemColors.Control;
@@ -305,8 +307,8 @@
             this.button_TinhTien.IdleBorderThickness = 1;
             this.button_TinhTien.IdleCornerRadius = 20;
             this.button_TinhTien.IdleFillColor = System.Drawing.Color.White;
-            this.button_TinhTien.IdleForecolor = System.Drawing.Color.SeaGreen;
-            this.button_TinhTien.IdleLineColor = System.Drawing.Color.SeaGreen;
+            this.button_TinhTien.IdleForecolor = System.Drawing.Color.Red;
+            this.button_TinhTien.IdleLineColor = System.Drawing.Color.Red;
             this.button_TinhTien.Location = new System.Drawing.Point(342, 19);
             this.button_TinhTien.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button_TinhTien.Name = "button_TinhTien";
@@ -394,20 +396,20 @@
             // 
             this.button_Thoat.ActiveBorderThickness = 1;
             this.button_Thoat.ActiveCornerRadius = 20;
-            this.button_Thoat.ActiveFillColor = System.Drawing.Color.Red;
+            this.button_Thoat.ActiveFillColor = System.Drawing.Color.Blue;
             this.button_Thoat.ActiveForecolor = System.Drawing.Color.White;
-            this.button_Thoat.ActiveLineColor = System.Drawing.Color.Red;
+            this.button_Thoat.ActiveLineColor = System.Drawing.Color.Blue;
             this.button_Thoat.BackColor = System.Drawing.SystemColors.Control;
             this.button_Thoat.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_Thoat.BackgroundImage")));
-            this.button_Thoat.ButtonText = "Thoát";
+            this.button_Thoat.ButtonText = "Cập nhật";
             this.button_Thoat.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button_Thoat.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button_Thoat.ForeColor = System.Drawing.Color.SeaGreen;
             this.button_Thoat.IdleBorderThickness = 1;
             this.button_Thoat.IdleCornerRadius = 20;
             this.button_Thoat.IdleFillColor = System.Drawing.Color.White;
-            this.button_Thoat.IdleForecolor = System.Drawing.Color.Red;
-            this.button_Thoat.IdleLineColor = System.Drawing.Color.Red;
+            this.button_Thoat.IdleForecolor = System.Drawing.Color.Blue;
+            this.button_Thoat.IdleLineColor = System.Drawing.Color.Blue;
             this.button_Thoat.Location = new System.Drawing.Point(292, 66);
             this.button_Thoat.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button_Thoat.Name = "button_Thoat";
@@ -420,9 +422,9 @@
             // 
             this.button_DSPhong.ActiveBorderThickness = 1;
             this.button_DSPhong.ActiveCornerRadius = 20;
-            this.button_DSPhong.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.button_DSPhong.ActiveFillColor = System.Drawing.Color.Blue;
             this.button_DSPhong.ActiveForecolor = System.Drawing.Color.White;
-            this.button_DSPhong.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.button_DSPhong.ActiveLineColor = System.Drawing.Color.Blue;
             this.button_DSPhong.BackColor = System.Drawing.SystemColors.Control;
             this.button_DSPhong.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_DSPhong.BackgroundImage")));
             this.button_DSPhong.ButtonText = "Phòng Trống";
@@ -432,8 +434,8 @@
             this.button_DSPhong.IdleBorderThickness = 1;
             this.button_DSPhong.IdleCornerRadius = 20;
             this.button_DSPhong.IdleFillColor = System.Drawing.Color.White;
-            this.button_DSPhong.IdleForecolor = System.Drawing.Color.SeaGreen;
-            this.button_DSPhong.IdleLineColor = System.Drawing.Color.SeaGreen;
+            this.button_DSPhong.IdleForecolor = System.Drawing.Color.Blue;
+            this.button_DSPhong.IdleLineColor = System.Drawing.Color.Blue;
             this.button_DSPhong.Location = new System.Drawing.Point(4, 66);
             this.button_DSPhong.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button_DSPhong.Name = "button_DSPhong";
@@ -466,6 +468,7 @@
             this.bunifuThinButton22.Size = new System.Drawing.Size(136, 35);
             this.bunifuThinButton22.TabIndex = 16;
             this.bunifuThinButton22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton22.Click += new System.EventHandler(this.bunifuThinButton22_Click);
             // 
             // bunifuCustomLabel2
             // 
@@ -518,11 +521,12 @@
             // 
             // groupBox2
             // 
-            this.groupBox2.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.groupBox2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox2.Controls.Add(this.gridView_1);
-            this.groupBox2.Location = new System.Drawing.Point(24, 332);
+            this.groupBox2.Location = new System.Drawing.Point(12, 332);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(949, 314);
+            this.groupBox2.Size = new System.Drawing.Size(967, 314);
             this.groupBox2.TabIndex = 13;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin chi tiết";

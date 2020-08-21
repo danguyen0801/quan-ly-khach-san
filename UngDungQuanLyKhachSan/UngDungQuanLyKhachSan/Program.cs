@@ -16,12 +16,13 @@ namespace UngDungQuanLyKhachSan
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            
+
             DangNhap dangNhap = new DangNhap();
             Application.Run(dangNhap);
-            if (dangNhap.isLogin==true)
+            if (dangNhap.isLogin == true)
             {
-                Application.Run(new Form_Main(dangNhap.fullName));
+                Form_Main giaoDien = new Form_Main(dangNhap.fullName);
+                Application.Run(giaoDien);
             }
         }
     }
