@@ -74,6 +74,7 @@ namespace UngDungQuanLyKhachSan
                     cmd.CommandText = truyVan;
                     cmd.Connection = connection;
                     // kiem tra tai khoan, lay maNv
+                   
                     using (SqlDataReader data = cmd.ExecuteReader())
                     {
                         if (data.Read() == true)

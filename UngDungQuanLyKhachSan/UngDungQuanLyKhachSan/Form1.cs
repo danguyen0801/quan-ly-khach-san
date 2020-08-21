@@ -12,13 +12,12 @@ namespace UngDungQuanLyKhachSan
         {
             InitializeComponent();
             this.Text = "Xin chào " + fullName;
-
         }
         private void Form1_Load(object sender, EventArgs e)
         {
             this.cUSTOMERTableAdapter.Fill(this.dataSet1.CUSTOMER);
             this.rOOMTableAdapter.Fill(this.dataSet1.ROOM);
-            gridView_1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.AllCells;
+            gridView_1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             //combobox phong con trong
             comboBox_PhongTrong.Items.Clear();
             comboBox_phongDaThue.Items.Clear();
@@ -107,18 +106,26 @@ namespace UngDungQuanLyKhachSan
 
         private void button_TimTen_Click(object sender, EventArgs e)
         {
-            string truyVan = "select Distinct RENT_BILL.CUSTOMER_NAME, RENT_BILL.START_DATE, ROOM.*"
+            if (txt_tenKhachhang.Text != "")
+            {
+                string truyVan = "select Distinct RENT_BILL.CUSTOMER_NAME, RENT_BILL.START_DATE, ROOM.*"
                 + "FROM  RENT_BILL , ROOM "
                 + "WHERE RENT_BILL.CUSTOMER_NAME LIKE N'%" + txt_tenKhachhang.Text + "%' and  ROOM.ROOM_ID = RENT_BILL.ROOM_ID";
-            DataSet data = truyVanDuLieu(truyVan);
-            if (data.Tables[0].Rows.Count != 0)
-            {
-                gridView_1.DataSource = data.Tables[0];
+                DataSet data = truyVanDuLieu(truyVan);
+                if (data.Tables[0].Rows.Count != 0)
+                {
+                    gridView_1.DataSource = data.Tables[0];
+                }
+                else
+                {
+                    MessageBox.Show("Không tìm thấy khách hàng tương ứng");
+                }
             }
             else
             {
-                MessageBox.Show("Không tìm thấy khách hàng tương ứng");
+                MessageBox.Show("Chưa nhập tên khách hàng");
             }
+
         }
 
         private void button_xemPhongTrong_Click(object sender, EventArgs e)
@@ -170,7 +177,8 @@ namespace UngDungQuanLyKhachSan
 
         private void button_Thoat_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            string query_DSPhong = "select * from ROOM";
+            gridView_1.DataSource = truyVanDuLieu(query_DSPhong).Tables[0];
         }
 
         private void groupBox2_Enter(object sender, EventArgs e)
@@ -186,6 +194,19 @@ namespace UngDungQuanLyKhachSan
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void bunifuThinButton22_Click(object sender, EventArgs e)
+        {
+            if (comboBox_PhongTrong.Text != "")
+            {
+                thuePhong Thue = new thuePhong(comboBox_PhongTrong.Text);
+                Thue.ShowDialog();
+            }
+            else
+            {
+                MessageBox.Show("Chưa chọn số phòng");
+            }
         }
     }
 
