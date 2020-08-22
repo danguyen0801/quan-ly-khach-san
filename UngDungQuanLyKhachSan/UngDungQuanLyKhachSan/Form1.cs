@@ -15,8 +15,8 @@ namespace UngDungQuanLyKhachSan
         }
         private void Form1_Load(object sender, EventArgs e)
         {
-            this.cUSTOMERTableAdapter.Fill(this.dataSet1.CUSTOMER);
-            this.rOOMTableAdapter.Fill(this.dataSet1.ROOM);
+            //this.cUSTOMERTableAdapter.Fill(this.dataSet1.CUSTOMER);
+            //this.rOOMTableAdapter.Fill(this.dataSet1.ROOM);
             gridView_1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             //combobox phong con trong
             comboBox_PhongTrong.Items.Clear();
