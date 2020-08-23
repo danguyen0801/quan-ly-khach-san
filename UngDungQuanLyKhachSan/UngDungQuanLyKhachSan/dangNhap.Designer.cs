@@ -50,7 +50,6 @@
             this.bunifuCustomLabel1.Size = new System.Drawing.Size(109, 22);
             this.bunifuCustomLabel1.TabIndex = 0;
             this.bunifuCustomLabel1.Text = "Tài khoản:";
-            this.bunifuCustomLabel1.Click += new System.EventHandler(this.bunifuCustomLabel1_Click);
             // 
             // customerTableAdapter1
             // 
@@ -66,7 +65,6 @@
             this.bunifuCustomLabel2.Size = new System.Drawing.Size(102, 22);
             this.bunifuCustomLabel2.TabIndex = 0;
             this.bunifuCustomLabel2.Text = "Mật khẩu:";
-            this.bunifuCustomLabel2.Click += new System.EventHandler(this.bunifuCustomLabel2_Click);
             // 
             // txt_MK
             // 
@@ -89,7 +87,6 @@
             this.txt_TK.Size = new System.Drawing.Size(450, 22);
             this.txt_TK.TabIndex = 1;
             this.txt_TK.Text = "thuyuyen";
-            this.txt_TK.TextChanged += new System.EventHandler(this.bunifuCustomTextbox2_TextChanged);
             // 
             // bunifuCustomLabel3
             // 
@@ -101,7 +98,6 @@
             this.bunifuCustomLabel3.Size = new System.Drawing.Size(117, 29);
             this.bunifuCustomLabel3.TabIndex = 0;
             this.bunifuCustomLabel3.Text = "Đăng nhập";
-            this.bunifuCustomLabel3.Click += new System.EventHandler(this.bunifuCustomLabel3_Click);
             // 
             // button_DangNhap
             // 
@@ -185,7 +181,6 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "DangNhap";
             this.Text = "Đăng nhập ứng dụng";
-            this.Load += new System.EventHandler(this.DangNhap_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

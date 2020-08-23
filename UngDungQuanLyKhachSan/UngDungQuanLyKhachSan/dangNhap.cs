@@ -25,31 +25,6 @@ namespace UngDungQuanLyKhachSan
             isLogin = false;
         }
 
-        private void bunifuCustomLabel1_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuCustomLabel2_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuCustomTextbox2_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuCustomLabel3_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void DangNhap_Load(object sender, EventArgs e)
-        {
-
-        }
-
         private void bunifuThinButton21_Click(object sender, EventArgs e)
         {
             string tk = txt_TK.Text;

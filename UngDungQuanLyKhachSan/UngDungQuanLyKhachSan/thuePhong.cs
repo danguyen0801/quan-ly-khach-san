@@ -43,14 +43,8 @@ namespace UngDungQuanLyKhachSan
             }
 
         }
-        private void thuePhong_Load(object sender, EventArgs e)
-        {
-
-        }
-        private void diachiTP_Click(object sender, EventArgs e)
-        {
-
-        }
+        
+       
         bool themDuLieu(string queryInsert)
         {
             try
@@ -74,18 +68,37 @@ namespace UngDungQuanLyKhachSan
         }
         private void button_LuuTP_Click(object sender, EventArgs e)
         {
-            //tạo mã khách hàng
-            string query_id_KH = "SELECT dbo.AUTO_CUSTOMER() GO";
-            string id_KH = truyVanDuLieu(query_id_KH).Tables[0].Rows[0][0].ToString();
-            //
-            string query_Them = "INSERT INTO CUSTOMER (CUSTOMER_ID,CUSTOMER_NAME, TYPE_CUSTOMER,ID_CARD, ADDRESS)" +
-                "VALUES ('"+id_KH+"',N'" + txt_hotenTP.Text + "' ,N'" + comboBox_loaiTP.Text + "','" + txt_cmndTP.Text + "',N'" + txt_diachiTP.Text + "')";
-            //if (themDuLieu(query_Them))
-            //{
-            //    string query_Update = "UPDATE ";
+            //kiểm tra khách đã từng đăng ký chưa
+            string query_checkID = "EXEC check_customer @CMND = " + int.Parse(txt_cmndTP.Text) + "";
+            if (truyVanDuLieu(query_checkID).Tables[0].Rows[0][0].ToString() != "0")
+            {
+                string query_id_KH = "SELECT CUSTOMER_ID FROM CUSTOMER WHERE ID_CARD ="+txt_cmndTP.Text+" ";
+                string id_KH = truyVanDuLieu(query_id_KH).Tables[0].Rows[0][0].ToString();
+                string query_RentBill = "EXEC ADD_RENTBILL @ROOM_ID = '"+soPhong+"', @CUSTOMER_NAME=N'"+txt_hotenTP.Text+"', @CUSTOMER_ID='"+id_KH+"'";
+                truyVanDuLieu(query_RentBill);
+                string query_Update = "EXEC update_room_status @ROOM_ID='" + soPhong + "' ";
+                truyVanDuLieu(query_Update);
+                MessageBox.Show("Them thanh cong");
+            }
+            else
+            {   //tạo mã khách hàng mới
+                string query_id_KH = "SELECT dbo.AUTO_CUSTOMER() GO";
+                string id_KH = truyVanDuLieu(query_id_KH).Tables[0].Rows[0][0].ToString();
 
-
-            //}
+                string query_Them = "INSERT INTO CUSTOMER (CUSTOMER_ID,CUSTOMER_NAME, TYPE_CUSTOMER,ID_CARD, ADDRESS)" +
+                    "VALUES ('" + id_KH + "',N'" + txt_hotenTP.Text + "' ,N'" + comboBox_loaiTP.Text + "','" + txt_cmndTP.Text + "',N'" + txt_diachiTP.Text + "')";
+                if (themDuLieu(query_Them))
+                {
+                    string query_RentBill = "EXEC ADD_RENTBILL @ROOM_ID = '" + soPhong + "', @CUSTOMER_NAME=N'" + txt_hotenTP.Text + "', @CUSTOMER_ID='" + id_KH + "'";
+                    truyVanDuLieu(query_RentBill);
+                    string query_Update = "EXEC update_room_status @ROOM_ID='" + soPhong + "' ";
+                    truyVanDuLieu(query_Update);
+                }
+                else
+                {
+                    MessageBox.Show("Thêm không thành công\n");
+                }
+            }    
         }
 
         private void button_testTP_Click(object sender, EventArgs e)
