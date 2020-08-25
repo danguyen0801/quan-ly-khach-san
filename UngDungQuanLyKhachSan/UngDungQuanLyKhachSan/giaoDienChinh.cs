@@ -107,25 +107,6 @@ namespace UngDungQuanLyKhachSan
                         MessageBox.Show("Không tìm thấy khách hàng tương ứng");
                     }
                 }
-                //if (txt_tenKhachhang.Text != "")
-                //{
-                //    string truyVan = "select Distinct RENT_BILL.CUSTOMER_NAME, RENT_BILL.START_DATE, ROOM.*"
-                //    + "FROM  RENT_BILL , ROOM "
-                //    + "WHERE RENT_BILL.CUSTOMER_NAME LIKE N'%" + txt_tenKhachhang.Text + "%' and  ROOM.ROOM_ID = RENT_BILL.ROOM_ID";
-                //    DataSet data = truyVanDuLieu(truyVan);
-                //    if (data.Tables[0].Rows.Count != 0)
-                //    {
-                //        gridView_1.DataSource = data.Tables[0];
-                //    }
-                //    else
-                //    {
-                //        MessageBox.Show("Không tìm thấy khách hàng tương ứng");
-                //    }
-                //}
-                //else
-                //{
-                //    MessageBox.Show("Chưa nhập tên khách hàng");
-                //}
             }
 
         }
@@ -239,6 +220,11 @@ namespace UngDungQuanLyKhachSan
             {
                 MessageBox.Show("kHÔNG CÒN PHÒNG LOẠI A");
             }
+        }
+
+        private void gridView_1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

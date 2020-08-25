@@ -15,21 +15,47 @@ namespace UngDungQuanLyKhachSan
     public partial class DangNhap : Form
     {
         public bool isLogin { get; set; }
+
+        public bool isQuanLy { get; set; }
         public string maNv { get; set; }
         public string fullName { get; set; }
 
+        DataSet truyVanDuLieu(string truyVan)
+        {
+            try
+            {
+                DataSet dataALL = new DataSet();
+                using (SqlConnection connection = new SqlConnection(ConnectionString.connectionString))
+                {
+                    connection.Open();
+                    SqlDataAdapter adapter = new SqlDataAdapter(truyVan, connection);
+                    adapter.SelectCommand = new SqlCommand(truyVan, connection);
+                    adapter.Fill(dataALL);
+                    connection.Close();
+
+                }
+                return dataALL;
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Lỗi kết nối! " + ex.Message);
+                return null;
+            }
+
+        }
         public DangNhap()
         {
             InitializeComponent();
             SetStyle(ControlStyles.ResizeRedraw, true);
             isLogin = false;
+            isQuanLy = false;
         }
 
         private void bunifuThinButton21_Click(object sender, EventArgs e)
         {
             string tk = txt_TK.Text;
             string mk = txt_MK.Text;
-            string truyVan = "SELECT * FROM ACCOUNT WHERE USERNAME = '" + tk + "' AND PASS = '" + mk + "'";
+            string truyVan = "SELECT EMPLOYEE_ID FROM ACCOUNT WHERE USERNAME = '" + tk + "' AND PASS = '" + mk + "'";
             string _err = string.Empty;
             if (tk == string.Empty)
                 _err = " Bạn chưa nhập tên tài khoản";
@@ -40,7 +66,34 @@ namespace UngDungQuanLyKhachSan
                 MessageBox.Show("Thông báo: \n" + _err);
                 return;
             }
-            try
+            DataSet data = truyVanDuLieu(truyVan);
+            if (data != null)
+            {
+                isLogin = true;
+                maNv = data.Tables[0].Rows[0][0].ToString();
+                string truyVan2 = "SELECT EMPLOYEE_NAME, ROLE FROM EMPLOYEE WHERE EMPLOYEE_ID = '" + maNv + "'";
+                data = truyVanDuLieu(truyVan2);
+                if (data != null)
+                {
+                    fullName = data.Tables[0].Rows[0][0].ToString();
+                    if (data.Tables[0].Rows[0][1].ToString() == "True")
+                    {
+                        isQuanLy = true;
+                        //MessageBox.Show("La quan ly");
+                    }
+                    this.Close();
+                }
+                else
+                {
+                    MessageBox.Show("Lỗi dữ liệu");
+                }
+            }
+            else
+            {
+                MessageBox.Show("Đăng nhập thất bại. \nSai tài khoản hoặc mật khẩu.");
+            }
+
+            /*try
             {
                 using (SqlConnection connection = new SqlConnection(ConnectionString.connectionString))
                 {
@@ -86,7 +139,7 @@ namespace UngDungQuanLyKhachSan
             catch (Exception ex)
             {
                 MessageBox.Show("Lỗi kết nối! " + ex.Message);
-            }
+            }*/
         }
 
         private void bunifuThinButton22_Click(object sender, EventArgs e)

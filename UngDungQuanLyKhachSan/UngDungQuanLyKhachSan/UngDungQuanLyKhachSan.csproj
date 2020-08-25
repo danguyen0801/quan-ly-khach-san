@@ -51,6 +51,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="capNhatDanhMucPhong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="capNhatDanhMucPhong.Designer.cs">
+      <DependentUpon>capNhatDanhMucPhong.cs</DependentUpon>
+    </Compile>
     <Compile Include="ConnectionString.cs" />
     <Compile Include="DataSet1.cs">
       <DependentUpon>DataSet1.xsd</DependentUpon>
@@ -74,12 +80,27 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="quanLy.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="quanLy.Designer.cs">
+      <DependentUpon>quanLy.cs</DependentUpon>
+    </Compile>
+    <Compile Include="quanLyTaiKhoan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="quanLyTaiKhoan.Designer.cs">
+      <DependentUpon>quanLyTaiKhoan.cs</DependentUpon>
+    </Compile>
     <Compile Include="thuePhong.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="thuePhong.Designer.cs">
       <DependentUpon>thuePhong.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="capNhatDanhMucPhong.resx">
+      <DependentUpon>capNhatDanhMucPhong.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="giaoDienChinh.resx">
       <DependentUpon>giaoDienChinh.cs</DependentUpon>
     </EmbeddedResource>
@@ -95,9 +116,16 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="quanLy.resx">
+      <DependentUpon>quanLy.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="quanLyTaiKhoan.resx">
+      <DependentUpon>quanLyTaiKhoan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="thuePhong.resx">
       <DependentUpon>thuePhong.cs</DependentUpon>
     </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
     <None Include="DataSet1.xsc">
       <DependentUpon>DataSet1.xsd</DependentUpon>
     </None>
