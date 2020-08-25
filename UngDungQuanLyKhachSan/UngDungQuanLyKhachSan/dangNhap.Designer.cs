@@ -86,7 +86,6 @@
             this.txt_TK.Name = "txt_TK";
             this.txt_TK.Size = new System.Drawing.Size(450, 22);
             this.txt_TK.TabIndex = 1;
-            this.txt_TK.Text = "thuyuyen";
             // 
             // bunifuCustomLabel3
             // 

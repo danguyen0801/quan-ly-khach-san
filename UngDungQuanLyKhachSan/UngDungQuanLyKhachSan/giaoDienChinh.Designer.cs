@@ -47,6 +47,7 @@
             this.gridView_1 = new System.Windows.Forms.DataGridView();
             this.rOOMBindingSource1 = new System.Windows.Forms.BindingSource(this.components);
             this.groupbox_ThongTin = new System.Windows.Forms.GroupBox();
+            this.button_HoaDon = new Bunifu.Framework.UI.BunifuThinButton2();
             this.traPhong = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.phongThanhToan = new System.Windows.Forms.Label();
@@ -59,6 +60,8 @@
             this.label_TenKhach = new System.Windows.Forms.Label();
             this.cUSTOMERTableAdapter = new UngDungQuanLyKhachSan.DataSet1TableAdapters.CUSTOMERTableAdapter();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.button_xemPhongTrongC = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.button_xemPhongTrongB = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuThinButton22 = new Bunifu.Framework.UI.BunifuThinButton2();
             this.bunifuCustomLabel2 = new Bunifu.Framework.UI.BunifuCustomLabel();
             this.button_xemPhongTrongA = new Bunifu.Framework.UI.BunifuThinButton2();
@@ -66,9 +69,6 @@
             this.button_Thoat = new Bunifu.Framework.UI.BunifuThinButton2();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
             this.button_return = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.button_HoaDon = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.button_xemPhongTrongB = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.button_xemPhongTrongC = new Bunifu.Framework.UI.BunifuThinButton2();
             this.groupbox_Timkiem.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.rOOMBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
@@ -121,7 +121,7 @@
             this.button_TinhTien.IdleFillColor = System.Drawing.Color.White;
             this.button_TinhTien.IdleForecolor = System.Drawing.Color.Blue;
             this.button_TinhTien.IdleLineColor = System.Drawing.Color.Blue;
-            this.button_TinhTien.Location = new System.Drawing.Point(292, 139);
+            this.button_TinhTien.Location = new System.Drawing.Point(292, 136);
             this.button_TinhTien.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.button_TinhTien.Name = "button_TinhTien";
             this.button_TinhTien.Size = new System.Drawing.Size(136, 35);
@@ -267,6 +267,7 @@
             this.gridView_1.RowTemplate.Height = 24;
             this.gridView_1.Size = new System.Drawing.Size(1006, 293);
             this.gridView_1.TabIndex = 12;
+            this.gridView_1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.gridView_1_CellContentClick);
             // 
             // rOOMBindingSource1
             // 
@@ -296,6 +297,34 @@
             this.groupbox_ThongTin.TabIndex = 1;
             this.groupbox_ThongTin.TabStop = false;
             this.groupbox_ThongTin.Text = "Thông Tin Thanh Toán";
+            // 
+            // button_HoaDon
+            // 
+            this.button_HoaDon.ActiveBorderThickness = 1;
+            this.button_HoaDon.ActiveCornerRadius = 20;
+            this.button_HoaDon.ActiveFillColor = System.Drawing.Color.Blue;
+            this.button_HoaDon.ActiveForecolor = System.Drawing.Color.White;
+            this.button_HoaDon.ActiveLineColor = System.Drawing.Color.Blue;
+            this.button_HoaDon.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.button_HoaDon.BackColor = System.Drawing.SystemColors.Control;
+            this.button_HoaDon.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_HoaDon.BackgroundImage")));
+            this.button_HoaDon.ButtonText = "Xác nhận";
+            this.button_HoaDon.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_HoaDon.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_HoaDon.ForeColor = System.Drawing.Color.Blue;
+            this.button_HoaDon.IdleBorderThickness = 1;
+            this.button_HoaDon.IdleCornerRadius = 20;
+            this.button_HoaDon.IdleFillColor = System.Drawing.Color.White;
+            this.button_HoaDon.IdleForecolor = System.Drawing.Color.Blue;
+            this.button_HoaDon.IdleLineColor = System.Drawing.Color.Blue;
+            this.button_HoaDon.Location = new System.Drawing.Point(371, 274);
+            this.button_HoaDon.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button_HoaDon.Name = "button_HoaDon";
+            this.button_HoaDon.Size = new System.Drawing.Size(136, 35);
+            this.button_HoaDon.TabIndex = 20;
+            this.button_HoaDon.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.button_HoaDon.Click += new System.EventHandler(this.button_HoaDon_Click);
             // 
             // traPhong
             // 
@@ -445,6 +474,58 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Tra cứu phòng trống";
             // 
+            // button_xemPhongTrongC
+            // 
+            this.button_xemPhongTrongC.ActiveBorderThickness = 1;
+            this.button_xemPhongTrongC.ActiveCornerRadius = 20;
+            this.button_xemPhongTrongC.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.button_xemPhongTrongC.ActiveForecolor = System.Drawing.Color.White;
+            this.button_xemPhongTrongC.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.button_xemPhongTrongC.BackColor = System.Drawing.SystemColors.Control;
+            this.button_xemPhongTrongC.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_xemPhongTrongC.BackgroundImage")));
+            this.button_xemPhongTrongC.ButtonText = "Loại C";
+            this.button_xemPhongTrongC.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_xemPhongTrongC.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_xemPhongTrongC.ForeColor = System.Drawing.Color.DeepPink;
+            this.button_xemPhongTrongC.IdleBorderThickness = 1;
+            this.button_xemPhongTrongC.IdleCornerRadius = 20;
+            this.button_xemPhongTrongC.IdleFillColor = System.Drawing.Color.White;
+            this.button_xemPhongTrongC.IdleForecolor = System.Drawing.Color.SeaGreen;
+            this.button_xemPhongTrongC.IdleLineColor = System.Drawing.Color.SeaGreen;
+            this.button_xemPhongTrongC.Location = new System.Drawing.Point(291, 66);
+            this.button_xemPhongTrongC.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button_xemPhongTrongC.Name = "button_xemPhongTrongC";
+            this.button_xemPhongTrongC.Size = new System.Drawing.Size(136, 35);
+            this.button_xemPhongTrongC.TabIndex = 18;
+            this.button_xemPhongTrongC.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.button_xemPhongTrongC.Click += new System.EventHandler(this.button_xemPhongTrongC_Click);
+            // 
+            // button_xemPhongTrongB
+            // 
+            this.button_xemPhongTrongB.ActiveBorderThickness = 1;
+            this.button_xemPhongTrongB.ActiveCornerRadius = 20;
+            this.button_xemPhongTrongB.ActiveFillColor = System.Drawing.Color.SeaGreen;
+            this.button_xemPhongTrongB.ActiveForecolor = System.Drawing.Color.White;
+            this.button_xemPhongTrongB.ActiveLineColor = System.Drawing.Color.SeaGreen;
+            this.button_xemPhongTrongB.BackColor = System.Drawing.SystemColors.Control;
+            this.button_xemPhongTrongB.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_xemPhongTrongB.BackgroundImage")));
+            this.button_xemPhongTrongB.ButtonText = "Loại B";
+            this.button_xemPhongTrongB.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_xemPhongTrongB.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_xemPhongTrongB.ForeColor = System.Drawing.Color.DeepPink;
+            this.button_xemPhongTrongB.IdleBorderThickness = 1;
+            this.button_xemPhongTrongB.IdleCornerRadius = 20;
+            this.button_xemPhongTrongB.IdleFillColor = System.Drawing.Color.White;
+            this.button_xemPhongTrongB.IdleForecolor = System.Drawing.Color.SeaGreen;
+            this.button_xemPhongTrongB.IdleLineColor = System.Drawing.Color.SeaGreen;
+            this.button_xemPhongTrongB.Location = new System.Drawing.Point(147, 66);
+            this.button_xemPhongTrongB.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button_xemPhongTrongB.Name = "button_xemPhongTrongB";
+            this.button_xemPhongTrongB.Size = new System.Drawing.Size(136, 35);
+            this.button_xemPhongTrongB.TabIndex = 17;
+            this.button_xemPhongTrongB.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.button_xemPhongTrongB.Click += new System.EventHandler(this.button_xemPhongTrongB_Click);
+            // 
             // bunifuThinButton22
             // 
             this.bunifuThinButton22.ActiveBorderThickness = 1;
@@ -495,7 +576,7 @@
             this.button_xemPhongTrongA.ButtonText = "Loại A";
             this.button_xemPhongTrongA.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button_xemPhongTrongA.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_xemPhongTrongA.ForeColor = System.Drawing.Color.DeepPink;
+            this.button_xemPhongTrongA.ForeColor = System.Drawing.Color.LightSeaGreen;
             this.button_xemPhongTrongA.IdleBorderThickness = 1;
             this.button_xemPhongTrongA.IdleCornerRadius = 20;
             this.button_xemPhongTrongA.IdleFillColor = System.Drawing.Color.White;
@@ -583,90 +664,11 @@
             this.button_return.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.button_return.Click += new System.EventHandler(this.button_return_Click);
             // 
-            // button_HoaDon
-            // 
-            this.button_HoaDon.ActiveBorderThickness = 1;
-            this.button_HoaDon.ActiveCornerRadius = 20;
-            this.button_HoaDon.ActiveFillColor = System.Drawing.Color.Blue;
-            this.button_HoaDon.ActiveForecolor = System.Drawing.Color.White;
-            this.button_HoaDon.ActiveLineColor = System.Drawing.Color.Blue;
-            this.button_HoaDon.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.button_HoaDon.BackColor = System.Drawing.SystemColors.Control;
-            this.button_HoaDon.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_HoaDon.BackgroundImage")));
-            this.button_HoaDon.ButtonText = "Xác nhận";
-            this.button_HoaDon.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button_HoaDon.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_HoaDon.ForeColor = System.Drawing.Color.Blue;
-            this.button_HoaDon.IdleBorderThickness = 1;
-            this.button_HoaDon.IdleCornerRadius = 20;
-            this.button_HoaDon.IdleFillColor = System.Drawing.Color.White;
-            this.button_HoaDon.IdleForecolor = System.Drawing.Color.Blue;
-            this.button_HoaDon.IdleLineColor = System.Drawing.Color.Blue;
-            this.button_HoaDon.Location = new System.Drawing.Point(371, 274);
-            this.button_HoaDon.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button_HoaDon.Name = "button_HoaDon";
-            this.button_HoaDon.Size = new System.Drawing.Size(136, 35);
-            this.button_HoaDon.TabIndex = 20;
-            this.button_HoaDon.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.button_HoaDon.Click += new System.EventHandler(this.button_HoaDon_Click);
-            // 
-            // button_xemPhongTrongB
-            // 
-            this.button_xemPhongTrongB.ActiveBorderThickness = 1;
-            this.button_xemPhongTrongB.ActiveCornerRadius = 20;
-            this.button_xemPhongTrongB.ActiveFillColor = System.Drawing.Color.SeaGreen;
-            this.button_xemPhongTrongB.ActiveForecolor = System.Drawing.Color.White;
-            this.button_xemPhongTrongB.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.button_xemPhongTrongB.BackColor = System.Drawing.SystemColors.Control;
-            this.button_xemPhongTrongB.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_xemPhongTrongB.BackgroundImage")));
-            this.button_xemPhongTrongB.ButtonText = "Loại B";
-            this.button_xemPhongTrongB.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button_xemPhongTrongB.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_xemPhongTrongB.ForeColor = System.Drawing.Color.DeepPink;
-            this.button_xemPhongTrongB.IdleBorderThickness = 1;
-            this.button_xemPhongTrongB.IdleCornerRadius = 20;
-            this.button_xemPhongTrongB.IdleFillColor = System.Drawing.Color.White;
-            this.button_xemPhongTrongB.IdleForecolor = System.Drawing.Color.SeaGreen;
-            this.button_xemPhongTrongB.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.button_xemPhongTrongB.Location = new System.Drawing.Point(147, 66);
-            this.button_xemPhongTrongB.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button_xemPhongTrongB.Name = "button_xemPhongTrongB";
-            this.button_xemPhongTrongB.Size = new System.Drawing.Size(136, 35);
-            this.button_xemPhongTrongB.TabIndex = 17;
-            this.button_xemPhongTrongB.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.button_xemPhongTrongB.Click += new System.EventHandler(this.button_xemPhongTrongB_Click);
-            // 
-            // button_xemPhongTrongC
-            // 
-            this.button_xemPhongTrongC.ActiveBorderThickness = 1;
-            this.button_xemPhongTrongC.ActiveCornerRadius = 20;
-            this.button_xemPhongTrongC.ActiveFillColor = System.Drawing.Color.SeaGreen;
-            this.button_xemPhongTrongC.ActiveForecolor = System.Drawing.Color.White;
-            this.button_xemPhongTrongC.ActiveLineColor = System.Drawing.Color.SeaGreen;
-            this.button_xemPhongTrongC.BackColor = System.Drawing.SystemColors.Control;
-            this.button_xemPhongTrongC.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_xemPhongTrongC.BackgroundImage")));
-            this.button_xemPhongTrongC.ButtonText = "Loại C";
-            this.button_xemPhongTrongC.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button_xemPhongTrongC.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_xemPhongTrongC.ForeColor = System.Drawing.Color.DeepPink;
-            this.button_xemPhongTrongC.IdleBorderThickness = 1;
-            this.button_xemPhongTrongC.IdleCornerRadius = 20;
-            this.button_xemPhongTrongC.IdleFillColor = System.Drawing.Color.White;
-            this.button_xemPhongTrongC.IdleForecolor = System.Drawing.Color.SeaGreen;
-            this.button_xemPhongTrongC.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.button_xemPhongTrongC.Location = new System.Drawing.Point(291, 66);
-            this.button_xemPhongTrongC.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button_xemPhongTrongC.Name = "button_xemPhongTrongC";
-            this.button_xemPhongTrongC.Size = new System.Drawing.Size(136, 35);
-            this.button_xemPhongTrongC.TabIndex = 18;
-            this.button_xemPhongTrongC.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.button_xemPhongTrongC.Click += new System.EventHandler(this.button_xemPhongTrongC_Click);
-            // 
             // Form_Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.Control;
             this.ClientSize = new System.Drawing.Size(1036, 695);
             this.Controls.Add(this.button_return);
             this.Controls.Add(this.button_Thoat);
