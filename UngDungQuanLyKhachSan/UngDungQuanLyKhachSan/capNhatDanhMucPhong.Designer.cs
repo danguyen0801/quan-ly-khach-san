@@ -40,12 +40,13 @@
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.button_checkRoom = new Bunifu.Framework.UI.BunifuThinButton2();
             this.button_XoaPhong = new Bunifu.Framework.UI.BunifuThinButton2();
             this.comboBox_MaPhongXoa = new System.Windows.Forms.ComboBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBoxTenPhong = new System.Windows.Forms.TextBox();
+            this.textBoxGhiChu = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.bunifuCustomTextbox1 = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
+            this.textBoxLoaiPhong = new WindowsFormsControlLibrary1.BunifuCustomTextbox();
             this.label6 = new System.Windows.Forms.Label();
             this.label7 = new System.Windows.Forms.Label();
             this.label8 = new System.Windows.Forms.Label();
@@ -102,6 +103,7 @@
             this.button_ThemPhong.Size = new System.Drawing.Size(136, 35);
             this.button_ThemPhong.TabIndex = 1;
             this.button_ThemPhong.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.button_ThemPhong.Click += new System.EventHandler(this.button_ThemPhong_Click);
             // 
             // comboBox_Loai
             // 
@@ -180,12 +182,13 @@
             // 
             // groupBox2
             // 
+            this.groupBox2.Controls.Add(this.button_checkRoom);
             this.groupBox2.Controls.Add(this.button_XoaPhong);
             this.groupBox2.Controls.Add(this.comboBox_MaPhongXoa);
-            this.groupBox2.Controls.Add(this.textBox1);
-            this.groupBox2.Controls.Add(this.textBox2);
+            this.groupBox2.Controls.Add(this.textBoxTenPhong);
+            this.groupBox2.Controls.Add(this.textBoxGhiChu);
             this.groupBox2.Controls.Add(this.label5);
-            this.groupBox2.Controls.Add(this.bunifuCustomTextbox1);
+            this.groupBox2.Controls.Add(this.textBoxLoaiPhong);
             this.groupBox2.Controls.Add(this.label6);
             this.groupBox2.Controls.Add(this.label7);
             this.groupBox2.Controls.Add(this.label8);
@@ -196,6 +199,32 @@
             this.groupBox2.TabIndex = 12;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Xóa phòng";
+            // 
+            // button_checkRoom
+            // 
+            this.button_checkRoom.ActiveBorderThickness = 1;
+            this.button_checkRoom.ActiveCornerRadius = 20;
+            this.button_checkRoom.ActiveFillColor = System.Drawing.Color.Blue;
+            this.button_checkRoom.ActiveForecolor = System.Drawing.Color.White;
+            this.button_checkRoom.ActiveLineColor = System.Drawing.Color.Blue;
+            this.button_checkRoom.BackColor = System.Drawing.SystemColors.Control;
+            this.button_checkRoom.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_checkRoom.BackgroundImage")));
+            this.button_checkRoom.ButtonText = "Kiểm tra";
+            this.button_checkRoom.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_checkRoom.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_checkRoom.ForeColor = System.Drawing.Color.Blue;
+            this.button_checkRoom.IdleBorderThickness = 1;
+            this.button_checkRoom.IdleCornerRadius = 20;
+            this.button_checkRoom.IdleFillColor = System.Drawing.Color.White;
+            this.button_checkRoom.IdleForecolor = System.Drawing.Color.Blue;
+            this.button_checkRoom.IdleLineColor = System.Drawing.Color.Blue;
+            this.button_checkRoom.Location = new System.Drawing.Point(299, 143);
+            this.button_checkRoom.Margin = new System.Windows.Forms.Padding(6);
+            this.button_checkRoom.Name = "button_checkRoom";
+            this.button_checkRoom.Size = new System.Drawing.Size(136, 35);
+            this.button_checkRoom.TabIndex = 11;
+            this.button_checkRoom.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.button_checkRoom.Click += new System.EventHandler(this.button_checkRoom_Click);
             // 
             // button_XoaPhong
             // 
@@ -231,21 +260,21 @@
             this.comboBox_MaPhongXoa.Size = new System.Drawing.Size(136, 27);
             this.comboBox_MaPhongXoa.TabIndex = 10;
             // 
-            // textBox1
+            // textBoxTenPhong
             // 
-            this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(120, 84);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(136, 27);
-            this.textBox1.TabIndex = 9;
+            this.textBoxTenPhong.Enabled = false;
+            this.textBoxTenPhong.Location = new System.Drawing.Point(120, 84);
+            this.textBoxTenPhong.Name = "textBoxTenPhong";
+            this.textBoxTenPhong.Size = new System.Drawing.Size(136, 27);
+            this.textBoxTenPhong.TabIndex = 9;
             // 
-            // textBox2
+            // textBoxGhiChu
             // 
-            this.textBox2.Enabled = false;
-            this.textBox2.Location = new System.Drawing.Point(120, 201);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(136, 27);
-            this.textBox2.TabIndex = 8;
+            this.textBoxGhiChu.Enabled = false;
+            this.textBoxGhiChu.Location = new System.Drawing.Point(120, 201);
+            this.textBoxGhiChu.Name = "textBoxGhiChu";
+            this.textBoxGhiChu.Size = new System.Drawing.Size(136, 27);
+            this.textBoxGhiChu.TabIndex = 8;
             // 
             // label5
             // 
@@ -257,14 +286,14 @@
             this.label5.TabIndex = 4;
             this.label5.Text = "Mã Phòng: ";
             // 
-            // bunifuCustomTextbox1
+            // textBoxLoaiPhong
             // 
-            this.bunifuCustomTextbox1.BorderColor = System.Drawing.Color.SeaGreen;
-            this.bunifuCustomTextbox1.Enabled = false;
-            this.bunifuCustomTextbox1.Location = new System.Drawing.Point(120, 143);
-            this.bunifuCustomTextbox1.Name = "bunifuCustomTextbox1";
-            this.bunifuCustomTextbox1.Size = new System.Drawing.Size(136, 27);
-            this.bunifuCustomTextbox1.TabIndex = 7;
+            this.textBoxLoaiPhong.BorderColor = System.Drawing.Color.SeaGreen;
+            this.textBoxLoaiPhong.Enabled = false;
+            this.textBoxLoaiPhong.Location = new System.Drawing.Point(120, 143);
+            this.textBoxLoaiPhong.Name = "textBoxLoaiPhong";
+            this.textBoxLoaiPhong.Size = new System.Drawing.Size(136, 27);
+            this.textBoxLoaiPhong.TabIndex = 7;
             // 
             // label6
             // 
@@ -332,6 +361,7 @@
             this.button_return.Size = new System.Drawing.Size(136, 35);
             this.button_return.TabIndex = 21;
             this.button_return.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.button_return.Click += new System.EventHandler(this.button_return_Click);
             // 
             // button_CapNhat
             // 
@@ -381,6 +411,7 @@
             this.Controls.Add(this.groupBox1);
             this.Name = "capNhatDanhMucPhong";
             this.Text = "capNhatDanhMucPhong";
+            this.Load += new System.EventHandler(this.capNhatDanhMucPhong_Load);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.groupBox2.ResumeLayout(false);
@@ -406,10 +437,10 @@
         private System.Windows.Forms.GroupBox groupBox2;
         private Bunifu.Framework.UI.BunifuThinButton2 button_XoaPhong;
         private System.Windows.Forms.ComboBox comboBox_MaPhongXoa;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBoxTenPhong;
+        private System.Windows.Forms.TextBox textBoxGhiChu;
         private System.Windows.Forms.Label label5;
-        private WindowsFormsControlLibrary1.BunifuCustomTextbox bunifuCustomTextbox1;
+        private WindowsFormsControlLibrary1.BunifuCustomTextbox textBoxLoaiPhong;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Label label8;
@@ -417,5 +448,6 @@
         private System.Windows.Forms.DataGridView gridView_1;
         private Bunifu.Framework.UI.BunifuThinButton2 button_CapNhat;
         private Bunifu.Framework.UI.BunifuThinButton2 button_return;
+        private Bunifu.Framework.UI.BunifuThinButton2 button_checkRoom;
     }
 }

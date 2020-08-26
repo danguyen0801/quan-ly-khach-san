@@ -115,6 +115,8 @@ namespace UngDungQuanLyKhachSan
         {
             showAllRoom();
             loadComboBox();
+            comboBox_phongDaThue.Text = "";
+            comboBox_tenKH.Text = "";
         }
 
         private void bunifuThinButton22_Click(object sender, EventArgs e)
@@ -128,6 +130,7 @@ namespace UngDungQuanLyKhachSan
             {
                 MessageBox.Show("Chưa chọn số phòng");
             }
+            comboBox_PhongTrong.Text = "";
         }
 
         private void button_ThemNguoi_Click(object sender, EventArgs e)
@@ -145,15 +148,18 @@ namespace UngDungQuanLyKhachSan
 
         private void button_return_Click(object sender, EventArgs e)
         {
-            Application.Exit();
+            check_Login.isLogin = false;
+            this.Close();
         }
 
         private void button_TinhTien_Click(object sender, EventArgs e)
         {
+            comboBox_tenKH.Text = "";
             phongThanhToan.Text = comboBox_phongDaThue.Text;
             comboBox_tenKH.Items.Clear();
             string query_tenKHThanhToan = "select * from rent_bill where room_id = '" + comboBox_phongDaThue.Text + "'";
             fill_ComboBox(comboBox_tenKH, query_tenKHThanhToan, "CUSTOMER_NAME");
+            ngayThue.Text = truyVanDuLieu(query_tenKHThanhToan).Tables[0].Rows[0][2].ToString() ;
             traPhong.Text = DateTime.Today.ToString("d");
             string tongtien = "SELECT DBO.PAYMENT_BILL ('" + comboBox_phongDaThue.Text + "', (SELECT DBO.RENT_DAY('" + comboBox_phongDaThue.Text + "')))";
             tienThanhToan.Text = truyVanDuLieu(tongtien).Tables[0].Rows[0][0].ToString();
@@ -161,15 +167,25 @@ namespace UngDungQuanLyKhachSan
 
         private void button_HoaDon_Click(object sender, EventArgs e)
         {
-            string query_thanhToan = "EXEC THANHTOAN @ROOM_ID ='" + phongThanhToan.Text + "', @CUSTOMER_NAME = N'" + comboBox_tenKH.Text + "'";
-
-            if (truyVanDuLieu(query_thanhToan) != null)
-            {
-                MessageBox.Show("Thanh toán thành công");
-            }
+            if (comboBox_tenKH.Text == "")
+                MessageBox.Show("Mời chọn tên khách thanh toán");
             else
             {
-                MessageBox.Show("Thanh toán không thành công");
+                string query_thanhToan = "EXEC THANHTOAN @ROOM_ID ='" + phongThanhToan.Text + "', @CUSTOMER_NAME = N'" + comboBox_tenKH.Text + "'";
+
+                if (truyVanDuLieu(query_thanhToan) != null)
+                {
+                    MessageBox.Show("Thanh toán thành công");
+                    comboBox_phongDaThue.Text = "";
+                }
+                else
+                {
+                    MessageBox.Show("Thanh toán không thành công");
+                }
+                phongThanhToan.Text = "";
+                traPhong.Text = "";
+                ngayThue.Text = "";
+                tienThanhToan.Text = "";
             }
 
         }
