@@ -31,6 +31,7 @@
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(quanLy));
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.button_return = new Bunifu.Framework.UI.BunifuThinButton2();
             this.gridView_1 = new System.Windows.Forms.DataGridView();
             this.ChucNang = new System.Windows.Forms.GroupBox();
             this.button_CapNhatNhanVien = new Bunifu.Framework.UI.BunifuThinButton2();
@@ -43,24 +44,28 @@
             this.label5 = new System.Windows.Forms.Label();
             this.button_CapNhatQuyDinh = new Bunifu.Framework.UI.BunifuThinButton2();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.numericUpDown1 = new System.Windows.Forms.NumericUpDown();
-            this.textBox4 = new System.Windows.Forms.TextBox();
+            this.maxKH = new System.Windows.Forms.NumericUpDown();
             this.checkBox1 = new System.Windows.Forms.CheckBox();
-            this.textBox3 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
-            this.button_return = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.bunifuThinButton22 = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.phuThu = new System.Windows.Forms.NumericUpDown();
+            this.donGiaA = new System.Windows.Forms.NumericUpDown();
+            this.donGiaB = new System.Windows.Forms.NumericUpDown();
+            this.donGiaC = new System.Windows.Forms.NumericUpDown();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridView_1)).BeginInit();
             this.ChucNang.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.groupBox1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.maxKH)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.phuThu)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.donGiaA)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.donGiaB)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.donGiaC)).BeginInit();
             this.SuspendLayout();
             // 
             // groupBox2
@@ -69,6 +74,7 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox2.Controls.Add(this.button_return);
             this.groupBox2.Controls.Add(this.gridView_1);
+            this.groupBox2.Controls.Add(this.bunifuThinButton21);
             this.groupBox2.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.groupBox2.Location = new System.Drawing.Point(19, 221);
             this.groupBox2.Name = "groupBox2";
@@ -77,6 +83,33 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Thông tin chi tiết";
             this.groupBox2.Enter += new System.EventHandler(this.groupBox2_Enter);
+            // 
+            // button_return
+            // 
+            this.button_return.ActiveBorderThickness = 1;
+            this.button_return.ActiveCornerRadius = 20;
+            this.button_return.ActiveFillColor = System.Drawing.Color.Red;
+            this.button_return.ActiveForecolor = System.Drawing.Color.White;
+            this.button_return.ActiveLineColor = System.Drawing.Color.Red;
+            this.button_return.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.button_return.BackColor = System.Drawing.SystemColors.Control;
+            this.button_return.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_return.BackgroundImage")));
+            this.button_return.ButtonText = "Đăng xuất";
+            this.button_return.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button_return.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button_return.ForeColor = System.Drawing.Color.Red;
+            this.button_return.IdleBorderThickness = 1;
+            this.button_return.IdleCornerRadius = 20;
+            this.button_return.IdleFillColor = System.Drawing.Color.White;
+            this.button_return.IdleForecolor = System.Drawing.Color.Red;
+            this.button_return.IdleLineColor = System.Drawing.Color.Red;
+            this.button_return.Location = new System.Drawing.Point(944, 424);
+            this.button_return.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
+            this.button_return.Name = "button_return";
+            this.button_return.Size = new System.Drawing.Size(112, 35);
+            this.button_return.TabIndex = 22;
+            this.button_return.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.button_return.Click += new System.EventHandler(this.button_return_Click);
             // 
             // gridView_1
             // 
@@ -94,8 +127,8 @@
             // 
             // ChucNang
             // 
+            this.ChucNang.Controls.Add(this.bunifuThinButton22);
             this.ChucNang.Controls.Add(this.button_CapNhatNhanVien);
-            this.ChucNang.Controls.Add(this.bunifuThinButton21);
             this.ChucNang.Controls.Add(this.button_CapNhatPhong);
             this.ChucNang.Location = new System.Drawing.Point(19, 12);
             this.ChucNang.Margin = new System.Windows.Forms.Padding(2);
@@ -124,7 +157,7 @@
             this.button_CapNhatNhanVien.IdleFillColor = System.Drawing.Color.White;
             this.button_CapNhatNhanVien.IdleForecolor = System.Drawing.Color.Blue;
             this.button_CapNhatNhanVien.IdleLineColor = System.Drawing.Color.Blue;
-            this.button_CapNhatNhanVien.Location = new System.Drawing.Point(8, 134);
+            this.button_CapNhatNhanVien.Location = new System.Drawing.Point(10, 136);
             this.button_CapNhatNhanVien.Margin = new System.Windows.Forms.Padding(6);
             this.button_CapNhatNhanVien.Name = "button_CapNhatNhanVien";
             this.button_CapNhatNhanVien.Size = new System.Drawing.Size(178, 35);
@@ -139,9 +172,10 @@
             this.bunifuThinButton21.ActiveFillColor = System.Drawing.Color.Blue;
             this.bunifuThinButton21.ActiveForecolor = System.Drawing.Color.White;
             this.bunifuThinButton21.ActiveLineColor = System.Drawing.Color.Blue;
+            this.bunifuThinButton21.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.bunifuThinButton21.BackColor = System.Drawing.SystemColors.Control;
             this.bunifuThinButton21.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton21.BackgroundImage")));
-            this.bunifuThinButton21.ButtonText = "Danh sách Phòng";
+            this.bunifuThinButton21.ButtonText = "Danh sách phòng";
             this.bunifuThinButton21.Cursor = System.Windows.Forms.Cursors.Hand;
             this.bunifuThinButton21.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bunifuThinButton21.ForeColor = System.Drawing.Color.Blue;
@@ -150,7 +184,7 @@
             this.bunifuThinButton21.IdleFillColor = System.Drawing.Color.White;
             this.bunifuThinButton21.IdleForecolor = System.Drawing.Color.Blue;
             this.bunifuThinButton21.IdleLineColor = System.Drawing.Color.Blue;
-            this.bunifuThinButton21.Location = new System.Drawing.Point(8, 22);
+            this.bunifuThinButton21.Location = new System.Drawing.Point(756, 424);
             this.bunifuThinButton21.Margin = new System.Windows.Forms.Padding(6);
             this.bunifuThinButton21.Name = "bunifuThinButton21";
             this.bunifuThinButton21.Size = new System.Drawing.Size(178, 35);
@@ -176,7 +210,7 @@
             this.button_CapNhatPhong.IdleFillColor = System.Drawing.Color.White;
             this.button_CapNhatPhong.IdleForecolor = System.Drawing.Color.Blue;
             this.button_CapNhatPhong.IdleLineColor = System.Drawing.Color.Blue;
-            this.button_CapNhatPhong.Location = new System.Drawing.Point(8, 78);
+            this.button_CapNhatPhong.Location = new System.Drawing.Point(10, 85);
             this.button_CapNhatPhong.Margin = new System.Windows.Forms.Padding(6);
             this.button_CapNhatPhong.Name = "button_CapNhatPhong";
             this.button_CapNhatPhong.Size = new System.Drawing.Size(178, 35);
@@ -202,7 +236,7 @@
             this.button_XemDSHoaDon.IdleFillColor = System.Drawing.Color.White;
             this.button_XemDSHoaDon.IdleForecolor = System.Drawing.Color.Blue;
             this.button_XemDSHoaDon.IdleLineColor = System.Drawing.Color.Blue;
-            this.button_XemDSHoaDon.Location = new System.Drawing.Point(10, 134);
+            this.button_XemDSHoaDon.Location = new System.Drawing.Point(10, 136);
             this.button_XemDSHoaDon.Margin = new System.Windows.Forms.Padding(6);
             this.button_XemDSHoaDon.Name = "button_XemDSHoaDon";
             this.button_XemDSHoaDon.Size = new System.Drawing.Size(178, 35);
@@ -226,7 +260,7 @@
             "10",
             "11",
             "12"});
-            this.comboBox_Thang.Location = new System.Drawing.Point(88, 31);
+            this.comboBox_Thang.Location = new System.Drawing.Point(88, 38);
             this.comboBox_Thang.Name = "comboBox_Thang";
             this.comboBox_Thang.Size = new System.Drawing.Size(100, 27);
             this.comboBox_Thang.TabIndex = 5;
@@ -264,7 +298,7 @@
             this.button_ThongKe.IdleFillColor = System.Drawing.Color.White;
             this.button_ThongKe.IdleForecolor = System.Drawing.Color.Blue;
             this.button_ThongKe.IdleLineColor = System.Drawing.Color.Blue;
-            this.button_ThongKe.Location = new System.Drawing.Point(10, 78);
+            this.button_ThongKe.Location = new System.Drawing.Point(10, 85);
             this.button_ThongKe.Margin = new System.Windows.Forms.Padding(6);
             this.button_ThongKe.Name = "button_ThongKe";
             this.button_ThongKe.Size = new System.Drawing.Size(178, 35);
@@ -276,7 +310,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Arial", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(6, 33);
+            this.label5.Location = new System.Drawing.Point(6, 40);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(76, 23);
             this.label5.TabIndex = 6;
@@ -300,23 +334,24 @@
             this.button_CapNhatQuyDinh.IdleFillColor = System.Drawing.Color.White;
             this.button_CapNhatQuyDinh.IdleForecolor = System.Drawing.Color.Blue;
             this.button_CapNhatQuyDinh.IdleLineColor = System.Drawing.Color.Blue;
-            this.button_CapNhatQuyDinh.Location = new System.Drawing.Point(559, 132);
+            this.button_CapNhatQuyDinh.Location = new System.Drawing.Point(457, 135);
             this.button_CapNhatQuyDinh.Margin = new System.Windows.Forms.Padding(6);
             this.button_CapNhatQuyDinh.Name = "button_CapNhatQuyDinh";
-            this.button_CapNhatQuyDinh.Size = new System.Drawing.Size(89, 36);
+            this.button_CapNhatQuyDinh.Size = new System.Drawing.Size(112, 35);
             this.button_CapNhatQuyDinh.TabIndex = 3;
             this.button_CapNhatQuyDinh.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.button_CapNhatQuyDinh.Visible = false;
             this.button_CapNhatQuyDinh.Click += new System.EventHandler(this.button_CapNhatQuyDinh_Click);
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.numericUpDown1);
-            this.groupBox1.Controls.Add(this.textBox4);
+            this.groupBox1.Controls.Add(this.donGiaC);
+            this.groupBox1.Controls.Add(this.donGiaB);
+            this.groupBox1.Controls.Add(this.donGiaA);
+            this.groupBox1.Controls.Add(this.phuThu);
+            this.groupBox1.Controls.Add(this.maxKH);
             this.groupBox1.Controls.Add(this.button_CapNhatQuyDinh);
             this.groupBox1.Controls.Add(this.checkBox1);
-            this.groupBox1.Controls.Add(this.textBox3);
-            this.groupBox1.Controls.Add(this.textBox2);
-            this.groupBox1.Controls.Add(this.textBox1);
             this.groupBox1.Controls.Add(this.label6);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
@@ -329,36 +364,33 @@
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Quy định";
             // 
-            // numericUpDown1
+            // maxKH
             // 
-            this.numericUpDown1.Enabled = false;
-            this.numericUpDown1.Location = new System.Drawing.Point(425, 34);
-            this.numericUpDown1.Minimum = new decimal(new int[] {
+            this.maxKH.Enabled = false;
+            this.maxKH.Location = new System.Drawing.Point(425, 38);
+            this.maxKH.Maximum = new decimal(new int[] {
+            10,
+            0,
+            0,
+            0});
+            this.maxKH.Minimum = new decimal(new int[] {
             1,
             0,
             0,
             0});
-            this.numericUpDown1.Name = "numericUpDown1";
-            this.numericUpDown1.Size = new System.Drawing.Size(144, 27);
-            this.numericUpDown1.TabIndex = 5;
-            this.numericUpDown1.Value = new decimal(new int[] {
+            this.maxKH.Name = "maxKH";
+            this.maxKH.Size = new System.Drawing.Size(144, 27);
+            this.maxKH.TabIndex = 5;
+            this.maxKH.Value = new decimal(new int[] {
             1,
             0,
             0,
             0});
-            // 
-            // textBox4
-            // 
-            this.textBox4.Enabled = false;
-            this.textBox4.Location = new System.Drawing.Point(425, 86);
-            this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(144, 27);
-            this.textBox4.TabIndex = 11;
             // 
             // checkBox1
             // 
             this.checkBox1.AutoSize = true;
-            this.checkBox1.Location = new System.Drawing.Point(311, 143);
+            this.checkBox1.Location = new System.Drawing.Point(311, 142);
             this.checkBox1.Name = "checkBox1";
             this.checkBox1.Size = new System.Drawing.Size(107, 23);
             this.checkBox1.TabIndex = 10;
@@ -366,34 +398,10 @@
             this.checkBox1.UseVisualStyleBackColor = true;
             this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox1_CheckedChanged);
             // 
-            // textBox3
-            // 
-            this.textBox3.Enabled = false;
-            this.textBox3.Location = new System.Drawing.Point(132, 144);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(144, 27);
-            this.textBox3.TabIndex = 8;
-            // 
-            // textBox2
-            // 
-            this.textBox2.Enabled = false;
-            this.textBox2.Location = new System.Drawing.Point(132, 88);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(144, 27);
-            this.textBox2.TabIndex = 7;
-            // 
-            // textBox1
-            // 
-            this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(132, 30);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(144, 27);
-            this.textBox1.TabIndex = 6;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(307, 39);
+            this.label6.Location = new System.Drawing.Point(307, 42);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(112, 19);
             this.label6.TabIndex = 4;
@@ -402,16 +410,16 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(307, 90);
+            this.label4.Location = new System.Drawing.Point(307, 93);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(75, 19);
+            this.label4.Size = new System.Drawing.Size(112, 19);
             this.label4.TabIndex = 3;
-            this.label4.Text = "Phụ thu: ";
+            this.label4.Text = "Phụ thu (%) : ";
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(3, 147);
+            this.label3.Location = new System.Drawing.Point(3, 144);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(120, 19);
             this.label3.TabIndex = 2;
@@ -420,7 +428,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(3, 91);
+            this.label2.Location = new System.Drawing.Point(3, 93);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(119, 19);
             this.label2.TabIndex = 1;
@@ -429,37 +437,144 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(0, 40);
+            this.label1.Location = new System.Drawing.Point(0, 42);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(123, 19);
             this.label1.TabIndex = 0;
             this.label1.Text = "Đơn giá loại A: ";
             // 
-            // button_return
+            // bunifuThinButton22
             // 
-            this.button_return.ActiveBorderThickness = 1;
-            this.button_return.ActiveCornerRadius = 20;
-            this.button_return.ActiveFillColor = System.Drawing.Color.Red;
-            this.button_return.ActiveForecolor = System.Drawing.Color.White;
-            this.button_return.ActiveLineColor = System.Drawing.Color.Red;
-            this.button_return.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.button_return.BackColor = System.Drawing.SystemColors.Control;
-            this.button_return.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button_return.BackgroundImage")));
-            this.button_return.ButtonText = "Thoát";
-            this.button_return.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button_return.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button_return.ForeColor = System.Drawing.Color.Red;
-            this.button_return.IdleBorderThickness = 1;
-            this.button_return.IdleCornerRadius = 20;
-            this.button_return.IdleFillColor = System.Drawing.Color.White;
-            this.button_return.IdleForecolor = System.Drawing.Color.Red;
-            this.button_return.IdleLineColor = System.Drawing.Color.Red;
-            this.button_return.Location = new System.Drawing.Point(967, 424);
-            this.button_return.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
-            this.button_return.Name = "button_return";
-            this.button_return.Size = new System.Drawing.Size(89, 35);
-            this.button_return.TabIndex = 22;
-            this.button_return.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton22.ActiveBorderThickness = 1;
+            this.bunifuThinButton22.ActiveCornerRadius = 20;
+            this.bunifuThinButton22.ActiveFillColor = System.Drawing.Color.Blue;
+            this.bunifuThinButton22.ActiveForecolor = System.Drawing.Color.White;
+            this.bunifuThinButton22.ActiveLineColor = System.Drawing.Color.Blue;
+            this.bunifuThinButton22.BackColor = System.Drawing.SystemColors.Control;
+            this.bunifuThinButton22.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton22.BackgroundImage")));
+            this.bunifuThinButton22.ButtonText = "Cập nhật Nhân viên";
+            this.bunifuThinButton22.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuThinButton22.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuThinButton22.ForeColor = System.Drawing.Color.Blue;
+            this.bunifuThinButton22.IdleBorderThickness = 1;
+            this.bunifuThinButton22.IdleCornerRadius = 20;
+            this.bunifuThinButton22.IdleFillColor = System.Drawing.Color.White;
+            this.bunifuThinButton22.IdleForecolor = System.Drawing.Color.Blue;
+            this.bunifuThinButton22.IdleLineColor = System.Drawing.Color.Blue;
+            this.bunifuThinButton22.Location = new System.Drawing.Point(10, 34);
+            this.bunifuThinButton22.Margin = new System.Windows.Forms.Padding(6);
+            this.bunifuThinButton22.Name = "bunifuThinButton22";
+            this.bunifuThinButton22.Size = new System.Drawing.Size(178, 35);
+            this.bunifuThinButton22.TabIndex = 5;
+            this.bunifuThinButton22.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton22.Click += new System.EventHandler(this.bunifuThinButton22_Click);
+            // 
+            // phuThu
+            // 
+            this.phuThu.Enabled = false;
+            this.phuThu.Location = new System.Drawing.Point(425, 89);
+            this.phuThu.Maximum = new decimal(new int[] {
+            99,
+            0,
+            0,
+            0});
+            this.phuThu.Minimum = new decimal(new int[] {
+            1,
+            0,
+            0,
+            0});
+            this.phuThu.Name = "phuThu";
+            this.phuThu.Size = new System.Drawing.Size(144, 27);
+            this.phuThu.TabIndex = 11;
+            this.phuThu.Value = new decimal(new int[] {
+            24,
+            0,
+            0,
+            0});
+            // 
+            // donGiaA
+            // 
+            this.donGiaA.Enabled = false;
+            this.donGiaA.Increment = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.donGiaA.Location = new System.Drawing.Point(129, 38);
+            this.donGiaA.Maximum = new decimal(new int[] {
+            500000,
+            0,
+            0,
+            0});
+            this.donGiaA.Minimum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
+            this.donGiaA.Name = "donGiaA";
+            this.donGiaA.Size = new System.Drawing.Size(144, 27);
+            this.donGiaA.TabIndex = 12;
+            this.donGiaA.Value = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
+            // 
+            // donGiaB
+            // 
+            this.donGiaB.Enabled = false;
+            this.donGiaB.Increment = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.donGiaB.Location = new System.Drawing.Point(129, 89);
+            this.donGiaB.Maximum = new decimal(new int[] {
+            500000,
+            0,
+            0,
+            0});
+            this.donGiaB.Minimum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
+            this.donGiaB.Name = "donGiaB";
+            this.donGiaB.Size = new System.Drawing.Size(144, 27);
+            this.donGiaB.TabIndex = 13;
+            this.donGiaB.Value = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
+            // 
+            // donGiaC
+            // 
+            this.donGiaC.Enabled = false;
+            this.donGiaC.Increment = new decimal(new int[] {
+            10000,
+            0,
+            0,
+            0});
+            this.donGiaC.Location = new System.Drawing.Point(129, 140);
+            this.donGiaC.Maximum = new decimal(new int[] {
+            500000,
+            0,
+            0,
+            0});
+            this.donGiaC.Minimum = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
+            this.donGiaC.Name = "donGiaC";
+            this.donGiaC.Size = new System.Drawing.Size(144, 27);
+            this.donGiaC.TabIndex = 14;
+            this.donGiaC.Value = new decimal(new int[] {
+            100000,
+            0,
+            0,
+            0});
             // 
             // quanLy
             // 
@@ -481,7 +596,11 @@
             this.groupBox3.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericUpDown1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.maxKH)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.phuThu)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.donGiaA)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.donGiaB)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.donGiaC)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -504,14 +623,15 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.CheckBox checkBox1;
         private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton21;
-        private System.Windows.Forms.TextBox textBox4;
         private Bunifu.Framework.UI.BunifuThinButton2 button_CapNhatNhanVien;
-        private System.Windows.Forms.NumericUpDown numericUpDown1;
+        private System.Windows.Forms.NumericUpDown maxKH;
         private Bunifu.Framework.UI.BunifuThinButton2 button_return;
+        private Bunifu.Framework.UI.BunifuThinButton2 bunifuThinButton22;
+        private System.Windows.Forms.NumericUpDown phuThu;
+        private System.Windows.Forms.NumericUpDown donGiaC;
+        private System.Windows.Forms.NumericUpDown donGiaB;
+        private System.Windows.Forms.NumericUpDown donGiaA;
     }
 }

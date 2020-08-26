@@ -1,143 +1,107 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="UngDungQuanLyKhachSan.capNhatDanhMucPhong" Collapsed="true">
+    <Position X="7.25" Y="8.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>DCAGAAEAACAAABAAQgWACAgCBAgCAAAAEmAAAAAAAAA=</HashCode>
+      <FileName>capNhatDanhMucPhong.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Class Name="UngDungQuanLyKhachSan.ConnectionString" Collapsed="true">
-    <Position X="4" Y="0.5" Width="1.5" />
+    <Position X="3" Y="0.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
       <FileName>ConnectionString.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="UngDungQuanLyKhachSan.DangNhap" Collapsed="true">
-    <Position X="5.75" Y="3.75" Width="1.5" />
+    <Position X="4.25" Y="6.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>BAAEAAAAACQgAAAAAACAAAACAEgAACAAICgICAAAAAA=</HashCode>
       <FileName>dangNhap.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="UngDungQuanLyKhachSan.DataSet1" Collapsed="true">
-    <Position X="0.5" Y="0.5" Width="1.5" />
-    <NestedTypes>
-      <Class Name="UngDungQuanLyKhachSan.DataSet1.BILLRow" Collapsed="true">
-        <TypeIdentifier />
-      </Class>
-      <Class Name="UngDungQuanLyKhachSan.DataSet1.CUSTOMERDataTable" Collapsed="true">
-        <TypeIdentifier />
-      </Class>
-      <Class Name="UngDungQuanLyKhachSan.DataSet1.BILLDataTable" Collapsed="true">
-        <TypeIdentifier />
-      </Class>
-      <Class Name="UngDungQuanLyKhachSan.DataSet1.ROOMDataTable" Collapsed="true">
-        <TypeIdentifier>
-          <NewMemberFileName>DataSet1.cs</NewMemberFileName>
-        </TypeIdentifier>
-      </Class>
-      <Class Name="UngDungQuanLyKhachSan.DataSet1.BILL_INFORowChangeEvent" Collapsed="true">
-        <TypeIdentifier />
-      </Class>
-      <Class Name="UngDungQuanLyKhachSan.DataSet1.RENT_BILLRowChangeEvent" Collapsed="true">
-        <TypeIdentifier />
-      </Class>
-      <Class Name="UngDungQuanLyKhachSan.DataSet1.ROOMRowChangeEvent" Collapsed="true">
-        <TypeIdentifier />
-      </Class>
-      <Class Name="UngDungQuanLyKhachSan.DataSet1.BILL_INFORow" Collapsed="true">
-        <TypeIdentifier />
-      </Class>
-      <Class Name="UngDungQuanLyKhachSan.DataSet1.CUSTOMERRowChangeEvent" Collapsed="true">
-        <TypeIdentifier />
-      </Class>
-      <Delegate Name="UngDungQuanLyKhachSan.DataSet1.CUSTOMERRowChangeEventHandler" Collapsed="true">
-        <TypeIdentifier />
-      </Delegate>
-      <Class Name="UngDungQuanLyKhachSan.DataSet1.ROOMRow" Collapsed="true">
-        <TypeIdentifier />
-      </Class>
-      <Class Name="UngDungQuanLyKhachSan.DataSet1.BILL_INFODataTable" Collapsed="true">
-        <TypeIdentifier />
-      </Class>
-      <Delegate Name="UngDungQuanLyKhachSan.DataSet1.BILL_INFORowChangeEventHandler" Collapsed="true">
-        <TypeIdentifier />
-      </Delegate>
-      <Delegate Name="UngDungQuanLyKhachSan.DataSet1.BILLRowChangeEventHandler" Collapsed="true">
-        <TypeIdentifier />
-      </Delegate>
-      <Delegate Name="UngDungQuanLyKhachSan.DataSet1.RENT_BILLRowChangeEventHandler" Collapsed="true">
-        <TypeIdentifier />
-      </Delegate>
-      <Class Name="UngDungQuanLyKhachSan.DataSet1.BILLRowChangeEvent" Collapsed="true">
-        <TypeIdentifier />
-      </Class>
-      <Delegate Name="UngDungQuanLyKhachSan.DataSet1.ROOMRowChangeEventHandler" Collapsed="true">
-        <TypeIdentifier />
-      </Delegate>
-      <Class Name="UngDungQuanLyKhachSan.DataSet1.RENT_BILLDataTable" Collapsed="true">
-        <TypeIdentifier />
-      </Class>
-      <Class Name="UngDungQuanLyKhachSan.DataSet1.CUSTOMERRow" Collapsed="true">
-        <TypeIdentifier />
-      </Class>
-      <Class Name="UngDungQuanLyKhachSan.DataSet1.RENT_BILLRow" Collapsed="true">
-        <TypeIdentifier />
-      </Class>
-    </NestedTypes>
+    <Position X="3" Y="1.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>ADAAAAgAAwAQAAdCBAgBQAAACIgCQRgAABJAACESJJM=</HashCode>
       <FileName>DataSet1.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="UngDungQuanLyKhachSan.Form_Main" Collapsed="true">
-    <Position X="7.5" Y="3.75" Width="1.5" />
+    <Position X="1.75" Y="7.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>CABFCAGBgK5IABAIAASIAAiCAVgyAiQAgGwARohBAAA=</HashCode>
       <FileName>giaoDienChinh.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="UngDungQuanLyKhachSan.quyDinh" Collapsed="true">
+    <Position X="6.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAAAEA0AAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Class Name="UngDungQuanLyKhachSan.Program" Collapsed="true">
-    <Position X="5.75" Y="2.25" Width="1.5" />
+    <Position X="4.25" Y="5.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
       <FileName>Program.cs</FileName>
     </TypeIdentifier>
   </Class>
+  <Class Name="UngDungQuanLyKhachSan.quanLy" Collapsed="true">
+    <Position X="6.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CiAgAIEBEDQABB0AAAiAgAZCIQgCAAQAEGQAAQEAAQA=</HashCode>
+      <FileName>quanLy.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="UngDungQuanLyKhachSan.quanLyTaiKhoan" Collapsed="true">
+    <Position X="5.5" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>DKAAIAEAACAAABQAQBSACAEGACgAAAAAEGAEBAAAAAA=</HashCode>
+      <FileName>quanLyTaiKhoan.cs</FileName>
+    </TypeIdentifier>
+  </Class>
   <Class Name="UngDungQuanLyKhachSan.thuePhong" Collapsed="true">
-    <Position X="4" Y="3.75" Width="1.5" />
+    <Position X="1.75" Y="8.5" Width="1.5" />
     <TypeIdentifier>
       <HashCode>EQQAAFBIEDAEUBAQAECAAABCAAkAAAZAIHAgAAAAFAA=</HashCode>
       <FileName>thuePhong.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="UngDungQuanLyKhachSan.DataSet1TableAdapters.ROOMTableAdapter" Collapsed="true">
-    <Position X="0.5" Y="1.5" Width="1.5" />
+    <Position X="5.25" Y="2.25" Width="1.75" />
     <TypeIdentifier>
       <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAgAAAAAAABBA=</HashCode>
     </TypeIdentifier>
   </Class>
   <Class Name="UngDungQuanLyKhachSan.DataSet1TableAdapters.BILLTableAdapter" Collapsed="true">
-    <Position X="0.5" Y="5.5" Width="1.5" />
+    <Position X="3" Y="3.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
     </TypeIdentifier>
   </Class>
   <Class Name="UngDungQuanLyKhachSan.DataSet1TableAdapters.BILL_INFOTableAdapter" Collapsed="true">
-    <Position X="0.5" Y="6.5" Width="1.5" />
+    <Position X="0.5" Y="3.25" Width="2" />
     <TypeIdentifier>
       <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
     </TypeIdentifier>
   </Class>
   <Class Name="UngDungQuanLyKhachSan.DataSet1TableAdapters.CUSTOMERTableAdapter" Collapsed="true">
-    <Position X="0.5" Y="4.5" Width="1.5" />
+    <Position X="2.75" Y="2.25" Width="2" />
     <TypeIdentifier>
       <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
     </TypeIdentifier>
   </Class>
   <Class Name="UngDungQuanLyKhachSan.DataSet1TableAdapters.RENT_BILLTableAdapter" Collapsed="true">
-    <Position X="0.5" Y="2.5" Width="1.5" />
+    <Position X="0.5" Y="2.25" Width="2" />
     <TypeIdentifier>
       <HashCode>EASAAGAAEAAAAAcAIAAAAAAAACEICAAAAAAAAAAABBA=</HashCode>
     </TypeIdentifier>
   </Class>
   <Class Name="UngDungQuanLyKhachSan.DataSet1TableAdapters.TableAdapterManager" Collapsed="true">
-    <Position X="0.5" Y="3.5" Width="1.5" />
+    <Position X="5.25" Y="3.25" Width="1.75" />
     <NestedTypes>
       <Enum Name="UngDungQuanLyKhachSan.DataSet1TableAdapters.TableAdapterManager.UpdateOrderOption" Collapsed="true">
         <TypeIdentifier />
@@ -152,13 +116,13 @@
     </TypeIdentifier>
   </Class>
   <Class Name="UngDungQuanLyKhachSan.Properties.Resources" Collapsed="true">
-    <Position X="2.25" Y="0.5" Width="1.5" />
+    <Position X="8.25" Y="5.75" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
     </TypeIdentifier>
   </Class>
   <Class Name="UngDungQuanLyKhachSan.Properties.Settings" Collapsed="true">
-    <Position X="2.25" Y="1.5" Width="1.5" />
+    <Position X="8.5" Y="7.25" Width="1.5" />
     <TypeIdentifier>
       <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAEAAAAAAAAAA=</HashCode>
     </TypeIdentifier>

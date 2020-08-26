@@ -14,7 +14,7 @@ namespace UngDungQuanLyKhachSan
 {
     public partial class DangNhap : Form
     {
-        public bool isLogin { get; set; }
+        //public bool isLogin { get; set; }
 
         public bool isQuanLy { get; set; }
         public string maNv { get; set; }
@@ -47,7 +47,7 @@ namespace UngDungQuanLyKhachSan
         {
             InitializeComponent();
             SetStyle(ControlStyles.ResizeRedraw, true);
-            isLogin = false;
+            //check_Login.isLogin = false;
             isQuanLy = false;
         }
 
@@ -55,7 +55,7 @@ namespace UngDungQuanLyKhachSan
         {
             string tk = txt_TK.Text;
             string mk = txt_MK.Text;
-            string truyVan = "SELECT EMPLOYEE_ID FROM ACCOUNT WHERE USERNAME = '" + tk + "' AND PASS = '" + mk + "'";
+            string truyVan = "EXEC CHECK_LOGIN @USERNAME = '"+tk+"', @PASS ='"+mk+"'";
             string _err = string.Empty;
             if (tk == string.Empty)
                 _err = " Bạn chưa nhập tên tài khoản";
@@ -67,11 +67,11 @@ namespace UngDungQuanLyKhachSan
                 return;
             }
             DataSet data = truyVanDuLieu(truyVan);
-            if (data != null)
+            if (data.Tables[0].Rows.Count !=0)
             {
-                isLogin = true;
+                check_Login.isLogin = true; 
                 maNv = data.Tables[0].Rows[0][0].ToString();
-                string truyVan2 = "SELECT EMPLOYEE_NAME, ROLE FROM EMPLOYEE WHERE EMPLOYEE_ID = '" + maNv + "'";
+                string truyVan2 = "EXEC get_name_role @MANV = '"+maNv+"'";
                 data = truyVanDuLieu(truyVan2);
                 if (data != null)
                 {
@@ -92,58 +92,11 @@ namespace UngDungQuanLyKhachSan
             {
                 MessageBox.Show("Đăng nhập thất bại. \nSai tài khoản hoặc mật khẩu.");
             }
-
-            /*try
-            {
-                using (SqlConnection connection = new SqlConnection(ConnectionString.connectionString))
-                {
-                    connection.Open();
-                    SqlCommand cmd = new SqlCommand();
-                    cmd.CommandText = truyVan;
-                    cmd.Connection = connection;
-                    // kiem tra tai khoan, lay maNv
-                   
-                    using (SqlDataReader data = cmd.ExecuteReader())
-                    {
-                        if (data.Read() == true)
-                        {
-                            isLogin = true;
-                            maNv = data["EMPLOYEE_ID"].ToString();
-                            
-                        }
-                        else
-                        {
-                            MessageBox.Show("Đăng nhập thất bại. \nSai tài khoản hoặc mật khẩu.");
-                        }
-                    }
-                    // lay ten Nhan Vien, chuyen ve giao dien chinh
-                    string truyVan2 = "SELECT * FROM EMPLOYEE WHERE EMPLOYEE_ID = '"+maNv+"'";
-                    cmd.CommandText = truyVan2;
-                    using (SqlDataReader data2 = cmd.ExecuteReader())
-                    {
-                        if (data2.Read() == true)
-                        {
-                            
-                            fullName = data2["EMPLOYEE_NAME"].ToString();
-                            this.Close();
-                        }
-                        else
-                        {
-                            MessageBox.Show("Lỗi dữ liệu");
-                        }
-                    }
-                    connection.Close();
-                }
-
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show("Lỗi kết nối! " + ex.Message);
-            }*/
         }
 
         private void bunifuThinButton22_Click(object sender, EventArgs e)
         {
+            check_Login.isOut = true;
             Application.Exit();
         }
     }

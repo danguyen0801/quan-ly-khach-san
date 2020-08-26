@@ -52,7 +52,7 @@ namespace UngDungQuanLyKhachSan
         public void loadComboBox()
         {
             comboBox_MaPhongXoa.Items.Clear();
-            string query_dsPhong = "select * from ROOM order by ROOM_ID asc";
+            string query_dsPhong = "select * from ROOM where status = 0 order by ROOM_ID asc";
             fill_ComboBox(comboBox_MaPhongXoa, query_dsPhong, "ROOM_ID");
         }
         public capNhatDanhMucPhong()
@@ -64,13 +64,72 @@ namespace UngDungQuanLyKhachSan
 
         private void button_XoaPhong_Click(object sender, EventArgs e)
         {
-
+            string query_delete_BILL = "DELETE FROM BILL WHERE ROOM_ID = '" + comboBox_MaPhongXoa.Text + "'";
+            string query_delete_BILL_INFO = "DELETE FROM BILL_INFO WHERE ROOM_ID = '" + comboBox_MaPhongXoa.Text + "'";
+            truyVanDuLieu(query_delete_BILL_INFO);
+            truyVanDuLieu(query_delete_BILL);
+            
+            string query_delete = "DELETE FROM ROOM WHERE ROOM_ID = '"+comboBox_MaPhongXoa.Text+"'";
+            truyVanDuLieu(query_delete);
+            MessageBox.Show("Xóa thông tin phòng thanh công");
+            comboBox_MaPhongXoa.Text = "";
+            textBoxTenPhong.Text = "";
+            textBoxLoaiPhong.Text ="";
+            textBoxGhiChu.Text = "";
         }
 
         private void button_CapNhat_Click(object sender, EventArgs e)
         {
             showAllRoom();
             loadComboBox();
+        }
+
+        private void button_ThemPhong_Click(object sender, EventArgs e)
+        {
+            if (txtMaPhong.Text == "")
+            {
+                MessageBox.Show("Mời nhập mã phòng");
+            }
+            else
+            {
+                string query_check = "SELECT * FROM ROOM WHERE ROOM_ID = '" + txtMaPhong.Text + "'";
+                if (truyVanDuLieu(query_check).Tables[0].Rows.Count != 0)
+                    MessageBox.Show("Mã phòng đã tồn tại, mời nhập mã phòng khác");
+                else
+                {
+                    string query = "EXEC ADD_ROOM @ROOM_ID ='" + txtMaPhong.Text + "', @ROOM_NAME= '" + txtTenPhong.Text + "', @ROOM_TYPE ='" + comboBox_Loai.Text + "', @NOTE= '" + txtGhiChu.Text + "'";
+                    truyVanDuLieu(query);
+                    MessageBox.Show("Thêm phòng thành công");
+                }
+            }
+            
+        }
+
+        private void button_checkRoom_Click(object sender, EventArgs e)
+        {
+            if (comboBox_MaPhongXoa.Text == "")
+            {
+                MessageBox.Show("Mời chọn mã phòng cần xóa");
+            }
+            else
+            {
+                string query_getdata = "SELECT ROOM_NAME, ROOM_TYPE, NOTE FROM ROOM WHERE ROOM_ID ='" + comboBox_MaPhongXoa.Text + "'";
+                DataTable data = truyVanDuLieu(query_getdata).Tables[0];
+                textBoxTenPhong.Text = data.Rows[0][0].ToString();
+                textBoxLoaiPhong.Text = data.Rows[0][1].ToString();
+                textBoxGhiChu.Text = data.Rows[0][2].ToString();
+            }
+
+        }
+
+        private void button_return_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void capNhatDanhMucPhong_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

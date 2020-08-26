@@ -52,7 +52,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.phongThanhToan = new System.Windows.Forms.Label();
             this.tienThanhToan = new System.Windows.Forms.Label();
-            this.ngayThanhToan = new System.Windows.Forms.Label();
+            this.ngayThue = new System.Windows.Forms.Label();
             this.comboBox_tenKH = new System.Windows.Forms.ComboBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label_Ngay = new System.Windows.Forms.Label();
@@ -283,7 +283,7 @@
             this.groupbox_ThongTin.Controls.Add(this.label2);
             this.groupbox_ThongTin.Controls.Add(this.phongThanhToan);
             this.groupbox_ThongTin.Controls.Add(this.tienThanhToan);
-            this.groupbox_ThongTin.Controls.Add(this.ngayThanhToan);
+            this.groupbox_ThongTin.Controls.Add(this.ngayThue);
             this.groupbox_ThongTin.Controls.Add(this.comboBox_tenKH);
             this.groupbox_ThongTin.Controls.Add(this.label4);
             this.groupbox_ThongTin.Controls.Add(this.label_Ngay);
@@ -378,18 +378,18 @@
             this.tienThanhToan.TabIndex = 22;
             this.tienThanhToan.Text = "0000000";
             // 
-            // ngayThanhToan
+            // ngayThue
             // 
-            this.ngayThanhToan.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.ngayThue.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.ngayThanhToan.AutoSize = true;
-            this.ngayThanhToan.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ngayThanhToan.Location = new System.Drawing.Point(223, 108);
-            this.ngayThanhToan.Name = "ngayThanhToan";
-            this.ngayThanhToan.Size = new System.Drawing.Size(73, 19);
-            this.ngayThanhToan.TabIndex = 21;
-            this.ngayThanhToan.Text = "1/1/2020";
+            this.ngayThue.AutoSize = true;
+            this.ngayThue.Font = new System.Drawing.Font("Arial", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ngayThue.Location = new System.Drawing.Point(223, 108);
+            this.ngayThue.Name = "ngayThue";
+            this.ngayThue.Size = new System.Drawing.Size(73, 19);
+            this.ngayThue.TabIndex = 21;
+            this.ngayThue.Text = "1/1/2020";
             // 
             // comboBox_tenKH
             // 
@@ -731,7 +731,7 @@
         private System.Windows.Forms.ComboBox comboBox_tenKH;
         private System.Windows.Forms.Label phongThanhToan;
         private System.Windows.Forms.Label tienThanhToan;
-        private System.Windows.Forms.Label ngayThanhToan;
+        private System.Windows.Forms.Label ngayThue;
         private Bunifu.Framework.UI.BunifuThinButton2 button_return;
         private System.Windows.Forms.Label traPhong;
         private System.Windows.Forms.Label label2;
